@@ -1,0 +1,20 @@
+<div class="container-fluid" >
+  <div class="row justify-content-center">
+
+    <div class="col-7 s1s1">
+      <div echarts [options]="options" [loading]="!mapLoaded" class="demo-chart"
+        (chartClick)="onChartEvent($event, 'chartClick')">
+      </div>
+    </div>
+
+    <div class="col-5 s1s2">
+
+      <div class="row">
+        <div class="col-12 s1s2s1" ></div>
+        <div class="col-12 s1s2s2" ></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+$section1Height: 550px;
+$sectionHeight2: 380px;
+
+.section1, .section2, .section3, .section4 {
+  height: $sectionHeight2;
+  border: 2px solid gray;
+  margin-bottom: 40px;
+}
+.section1 {
+  margin-top: 90px;
+  height: $section1Height;
+  border: 0px;
+}
+.s1s1, .s1s2{
+  height: $section1Height;
+}
+.s1s1{
+  border: 2px solid gray;
+}
+.s1s2s1, .s1s2s2{
+  border: 2px solid gray;
+}
+.s1s2s1{
+  height:300px;
+}
+.s1s2s2{
+  height:250px;
+}
+.section2{
+  border: 0px;
+}
+.s2s1, .s2s2, .s2s3{
+  border: 2px solid gray;
+  height: $sectionHeight2;
+}
+.section3{
+  border: 0px;
+}
+.s3s1, .s3s2, .s3s3{
+  border: 2px solid gray;
+  height: $sectionHeight2;
+}
+.section4{
+  border: 0px;
+}
+.s4s1, .s4s2, .s4s3{
+  border: 2px solid gray;
+  height: $sectionHeight2;
+}
+.section5{
+  border: 0px;
+}
+.s5s1, .s5s2, .s5s3{
+  border: 2px solid gray;
+  height: $sectionHeight2;
+}
