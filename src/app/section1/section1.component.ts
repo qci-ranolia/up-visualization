@@ -11,7 +11,9 @@ export class Section1Component implements OnInit {
 
   map : any = [];
   mapLoaded = false;
-  options: any;
+  option1: any;
+  option2: any;
+  treeData: any;
 
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
@@ -21,10 +23,16 @@ export class Section1Component implements OnInit {
       this.getMap();
     });
 
+    this.projectService.emitTree.subscribe(res=>{
+      this.treeData = res.tree;
+      this.getTree();
+    });
+
   }
 
   ngOnInit() {
     this.projectService.getMap();
+    this.projectService.getTree();
   }
 
   getMap() {
@@ -37,7 +45,7 @@ export class Section1Component implements OnInit {
           // register map:
           this.es.registerMap('USA', this.map);
           // update options:
-          this.options = {
+          this.option1 = {
             title: {
               text: 'test1',
               subtext: 'test2',
@@ -129,8 +137,60 @@ export class Section1Component implements OnInit {
         // });
     }
 
-  onChartEvent(event: any, type: string) {
-    console.log('chart event:', type, event);
+  getTree() {
+    const xAxisData = [];
+    this.option2 = {
+      tooltip: {
+        triggerOn: 'mousemove',
+        trigger: 'item',
+      },
+      series: [
+        {
+          type: 'tree',
+
+          data: [this.treeData],
+
+          top: '1%',
+          left: '7%',
+          bottom: '1%',
+          right: '20%',
+
+          symbolSize: 7,
+
+          label: {
+            normal: {
+              position: 'left',
+              verticalAlign: 'middle',
+              align: 'right',
+              fontSize: 9
+            }
+          },
+
+          leaves: {
+            label: {
+              normal: {
+                position: 'right',
+                verticalAlign: 'middle',
+                align: 'left'
+              }
+            }
+          },
+
+          expandAndCollapse: true,
+          animationDuration: 550,
+          animationDurationUpdate: 750
+        }
+      ]
+    };
   }
+
+  onMapEvent(event: any, type: string) {
+    // console.log('chart event:', type, event);
+  }
+
+  onchart1Event(event: any, type: string) {
+    // console.log('chart event:', type, event);
+  }
+
 
 }
