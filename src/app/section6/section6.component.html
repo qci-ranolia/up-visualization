@@ -1,3 +1,24 @@
-<p>
-  section6 works!
-</p>
+<div class="container-fluid">
+
+  <div class="row justify-content-center">
+
+    <div class="col-4 s6s1">
+      <h5>{{heading1}}  <b> {{count1}} </b> </h5>
+      <div echarts [options]="option1" ></div>
+    </div>
+    <div class="col-4 s6s2 text-left">
+      <h4>Villages</h4> <br>
+
+      <b>{{data21}}</b> &nbsp;  {{count21}}<br>
+      <b>{{data22}}</b> &nbsp;  {{count22}}<br>
+      <b>{{data23}}</b> &nbsp;  {{count23}}<br>
+
+    </div>
+    <div class="col-4 s6s3">
+      <h5>Number of Aanganwadi covered  <b> 10 </b> </h5>
+      <div echarts [options]="option3" ></div>
+    </div>
+
+  </div>
+
+</div>

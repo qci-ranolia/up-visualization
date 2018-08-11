@@ -17,6 +17,9 @@ export class ProjectService {
   emitSection4Graph1 = new EventEmitter<any>();
   emitSection5Graph1 = new EventEmitter<any>();
   emitSection5Graph2 = new EventEmitter<any>();
+  emitSection6Graph1 = new EventEmitter<any>();
+  emitSection6Graph2 = new EventEmitter<any>();
+  emitSection6Graph3 = new EventEmitter<any>();
 
   constructor(private APIService: APIService) {}
 
@@ -166,6 +169,48 @@ export class ProjectService {
 
       } else {
         alert('Error 110');
+      }
+    }, err=>{
+      console.log(err);
+    });
+  }
+
+  getSection6Graph1() {
+    this.APIService.GetGraph12().subscribe(res=>{
+      console.log(res);
+      if(res) {
+        this.emitSection6Graph1.emit(res);
+
+      } else {
+        alert('Error 120');
+      }
+    }, err=>{
+      console.log(err);
+    });
+  }
+
+  getSection6Graph2() {
+    this.APIService.GetGraph13().subscribe(res=>{
+      console.log(res);
+      if(res) {
+        this.emitSection6Graph2.emit(res);
+
+      } else {
+        alert('Error 130');
+      }
+    }, err=>{
+      console.log(err);
+    });
+  }
+
+  getSection6Graph3() {
+    this.APIService.GetGraph14().subscribe(res=>{
+      console.log(res);
+      if(res) {
+        this.emitSection6Graph3.emit(res);
+
+      } else {
+        alert('Error 140');
       }
     }, err=>{
       console.log(err);
