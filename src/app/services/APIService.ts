@@ -69,18 +69,4 @@ export class APIService {
   GetGraph14() {
     return this.http.get(this.projectURL + 'graph14.json').map(res => res.json());
   }
-
-  GetGraph12() {
-    return this.http.get(this.projectURL+'graph12.json').map(res=>res.json());
-  }
-
-  GetGraph13() {
-    return this.http.get(this.projectURL+'graph13.json').map(res=>res.json());
-  }
-
-  GetGraph14() {
-    return this.http.get(this.projectURL+'graph14.json').map(res=>res.json());
-  }
-
-
 }

@@ -79,13 +79,14 @@ export class Section1Component implements OnInit {
               }
             },
             visualMap: {
-              min: 0,
-              max: 7500,
-              text: ['High', 'Low'],
-              realtime: false,
-              calculable: true,
-              inRange: {
-                color: ['lightskyblue', 'yellow', 'orangered']
+
+              min:0,
+              max:7500,
+              text:['High','Low'],
+              realtime:false,
+              calculable:true,
+              inRange:{
+                color:['lightskyblue','yellow','orangered']
               }
             },
             series: [
