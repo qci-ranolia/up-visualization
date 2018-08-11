@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 192.168.15.237 --port 4100",
+    "start": "ng serve --host 192.168.15.214 --port 4100",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +12,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^5.2.0",
+    "@angular/animations": "^5.2.11",
+    "@angular/cdk": "^6.4.3",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
