@@ -1,65 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
-
-
 $section1Height: 550px;
 $sectionHeight2: 380px;
 $sectionHeight3: 380px;
+$boxShadow:0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+$themeBorder:1px solid #f0f0f0;
+$chartHeight:90%;
 
+body{
+  padding:0;
+  margin:0;
+  background:#f0f0f0;
+}
+.sticky-top{
+  box-shadow: $boxShadow  
+}
 .section1, .section2, .section3, .section4 {
   height: $sectionHeight2;
-  border: 2px solid gray;
+  border:$themeBorder;
   margin-bottom: 40px;
+  box-shadow: $boxShadow;
 }
 .section1 {
-  margin-top: 90px;
+  margin-top: 25px;
   height: $section1Height;
   border: 0px;
 }
 .s1s1, .s1s2{
   height: $section1Height;
-  border: 2px solid gray;
+  border: $themeBorder;
 }
-// .s1s2s1, .s1s2s2{
-//   border: 2px solid gray;
-// }
-// .s1s2s1{
-//   height:300px;
-// }
-// .s1s2s2{
-//   height:250px;
-// }
 .section2{
   border: 0px;
 }
 .s2s1, .s2s2, .s2s3{
-  border: 2px solid gray;
+  border: $themeBorder;
   height: $sectionHeight2;
 }
 .section3{
   border: 0px;
 }
 .s3s1, .s3s2, .s3s3{
-  border: 2px solid gray;
+  border: $themeBorder;
   height: $sectionHeight2;
 }
 .section4{
   border: 0px;
 }
 .s4s1, .s4s2, .s4s3{
-  border: 2px solid gray;
+  border: $themeBorder;
   height: $sectionHeight2;
 }
 .section5{
   border: 0px;
 }
 .s5s1, .s5s2, .s5s3{
-  border: 2px solid gray;
+  border: $themeBorder;
   height: $sectionHeight2;
 }
 .section6{
   border: 0px;
 }
 .s6s1, .s6s2, .s6s3{
-  border: 2px solid gray;
+  border: $themeBorder;
   height: $sectionHeight2;
+}
+.map-chart{
+  height:100%
 }

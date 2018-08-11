@@ -10,7 +10,7 @@
         "features": [ {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Agra", "Dist_Code": "146"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Agra", "Dist_Code": "146"
             }
             ,
             "geometry": {
@@ -21,7 +21,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Aligarh", "Dist_Code": "143"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Aligarh", "Dist_Code": "143"
             }
             ,
             "geometry": {
@@ -32,7 +32,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Allahabad", "Dist_Code": "175"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Allahabad", "Dist_Code": "175"
             }
             ,
             "geometry": {
@@ -43,7 +43,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Ambedkar Nagar", "Dist_Code": "178"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Ambedkar Nagar", "Dist_Code": "178"
             }
             ,
             "geometry": {
@@ -54,7 +54,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Auraiya", "Dist_Code": "162"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Auraiya", "Dist_Code": "162"
             }
             ,
             "geometry": {
@@ -65,7 +65,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Azamgarh", "Dist_Code": "191"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Azamgarh", "Dist_Code": "191"
             }
             ,
             "geometry": {
@@ -76,7 +76,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Budaun", "Dist_Code": "149"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Budaun", "Dist_Code": "149"
             }
             ,
             "geometry": {
@@ -87,7 +87,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Baghpat", "Dist_Code": "139"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Baghpat", "Dist_Code": "139"
             }
             ,
             "geometry": {
@@ -98,7 +98,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Bahraich", "Dist_Code": "180"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Bahraich", "Dist_Code": "180"
             }
             ,
             "geometry": {
@@ -109,7 +109,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Ballia", "Dist_Code": "193"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Ballia", "Dist_Code": "193"
             }
             ,
             "geometry": {
@@ -120,7 +120,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Balrampur", "Dist_Code": "182"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Balrampur", "Dist_Code": "182"
             }
             ,
             "geometry": {
@@ -131,7 +131,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Banda", "Dist_Code": "170"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Banda", "Dist_Code": "170"
             }
             ,
             "geometry": {
@@ -142,7 +142,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Bara Banki", "Dist_Code": "176"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Bara Banki", "Dist_Code": "176"
             }
             ,
             "geometry": {
@@ -153,7 +153,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Bareilly", "Dist_Code": "150"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Bareilly", "Dist_Code": "150"
             }
             ,
             "geometry": {
@@ -164,7 +164,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Basti", "Dist_Code": "185"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Basti", "Dist_Code": "185"
             }
             ,
             "geometry": {
@@ -175,7 +175,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Bijnor", "Dist_Code": "134"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Bijnor", "Dist_Code": "134"
             }
             ,
             "geometry": {
@@ -186,7 +186,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Bulandshahr", "Dist_Code": "142"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Bulandshahr", "Dist_Code": "142"
             }
             ,
             "geometry": {
@@ -197,7 +197,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Chandauli", "Dist_Code": "196"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Chandauli", "Dist_Code": "196"
             }
             ,
             "geometry": {
@@ -208,7 +208,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Chitrakoot", "Dist_Code": "171"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Chitrakoot", "Dist_Code": "171"
             }
             ,
             "geometry": {
@@ -219,7 +219,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Deoria", "Dist_Code": "190"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Deoria", "Dist_Code": "190"
             }
             ,
             "geometry": {
@@ -230,7 +230,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Etah", "Dist_Code": "201"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Etah", "Dist_Code": "201"
             }
             ,
             "geometry": {
@@ -241,7 +241,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Etawah", "Dist_Code": "161"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Etawah", "Dist_Code": "161"
             }
             ,
             "geometry": {
@@ -252,7 +252,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Faizabad", "Dist_Code": "177"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Faizabad", "Dist_Code": "177"
             }
             ,
             "geometry": {
@@ -263,7 +263,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Farrukhabad", "Dist_Code": "159"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Farrukhabad", "Dist_Code": "159"
             }
             ,
             "geometry": {
@@ -274,7 +274,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Fatehpur", "Dist_Code": "172"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Fatehpur", "Dist_Code": "172"
             }
             ,
             "geometry": {
@@ -285,7 +285,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Firozabad", "Dist_Code": "147"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Firozabad", "Dist_Code": "147"
             }
             ,
             "geometry": {
@@ -296,7 +296,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Gautam Buddha Nagar", "Dist_Code": "141"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Gautam Buddha Nagar", "Dist_Code": "141"
             }
             ,
             "geometry": {
@@ -307,7 +307,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Hapur", "Dist_Code": null
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Hapur", "Dist_Code": null
             }
             ,
             "geometry": {
@@ -318,7 +318,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Ghazipur", "Dist_Code": "195"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Ghazipur", "Dist_Code": "195"
             }
             ,
             "geometry": {
@@ -329,7 +329,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Gonda", "Dist_Code": "183"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Gonda", "Dist_Code": "183"
             }
             ,
             "geometry": {
@@ -340,7 +340,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Gorakhpur", "Dist_Code": "188"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Gorakhpur", "Dist_Code": "188"
             }
             ,
             "geometry": {
@@ -351,7 +351,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Hamirpur", "Dist_Code": "168"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Hamirpur", "Dist_Code": "168"
             }
             ,
             "geometry": {
@@ -362,7 +362,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Hardoi", "Dist_Code": "155"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Hardoi", "Dist_Code": "155"
             }
             ,
             "geometry": {
@@ -373,7 +373,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Hathras", "Dist_Code": "144"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Hathras", "Dist_Code": "144"
             }
             ,
             "geometry": {
@@ -384,7 +384,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Jalaun", "Dist_Code": "165"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Jalaun", "Dist_Code": "165"
             }
             ,
             "geometry": {
@@ -395,7 +395,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Jaunpur", "Dist_Code": "194"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Jaunpur", "Dist_Code": "194"
             }
             ,
             "geometry": {
@@ -406,7 +406,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Jhansi", "Dist_Code": "166"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Jhansi", "Dist_Code": "166"
             }
             ,
             "geometry": {
@@ -417,7 +417,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Amroha", "Dist_Code": "137"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Amroha", "Dist_Code": "137"
             }
             ,
             "geometry": {
@@ -428,7 +428,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kannauj", "Dist_Code": "160"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kannauj", "Dist_Code": "160"
             }
             ,
             "geometry": {
@@ -439,7 +439,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kanpur Nagar", "Dist_Code": "164"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kanpur Nagar", "Dist_Code": "164"
             }
             ,
             "geometry": {
@@ -450,7 +450,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kanpur Dehat", "Dist_Code": "163"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kanpur Dehat", "Dist_Code": "163"
             }
             ,
             "geometry": {
@@ -461,7 +461,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kaushambi", "Dist_Code": "174"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kaushambi", "Dist_Code": "174"
             }
             ,
             "geometry": {
@@ -472,7 +472,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kushinagar", "Dist_Code": "189"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kushinagar", "Dist_Code": "189"
             }
             ,
             "geometry": {
@@ -483,7 +483,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kheri", "Dist_Code": "153"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kheri", "Dist_Code": "153"
             }
             ,
             "geometry": {
@@ -494,7 +494,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Lalitpur", "Dist_Code": "167"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Lalitpur", "Dist_Code": "167"
             }
             ,
             "geometry": {
@@ -505,7 +505,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Lucknow", "Dist_Code": "157"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Lucknow", "Dist_Code": "157"
             }
             ,
             "geometry": {
@@ -516,7 +516,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Maharajganj", "Dist_Code": "187"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Maharajganj", "Dist_Code": "187"
             }
             ,
             "geometry": {
@@ -527,7 +527,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Mahoba", "Dist_Code": "169"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Mahoba", "Dist_Code": "169"
             }
             ,
             "geometry": {
@@ -538,7 +538,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Mainpuri", "Dist_Code": "148"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Mainpuri", "Dist_Code": "148"
             }
             ,
             "geometry": {
@@ -549,7 +549,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Mau", "Dist_Code": "192"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Mau", "Dist_Code": "192"
             }
             ,
             "geometry": {
@@ -560,7 +560,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Meerut", "Dist_Code": "138"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Meerut", "Dist_Code": "138"
             }
             ,
             "geometry": {
@@ -571,7 +571,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Mirzapur", "Dist_Code": "199"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Mirzapur", "Dist_Code": "199"
             }
             ,
             "geometry": {
@@ -582,7 +582,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Moradabad", "Dist_Code": "135"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Moradabad", "Dist_Code": "135"
             }
             ,
             "geometry": {
@@ -593,7 +593,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Muzaffarnagar", "Dist_Code": "133"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Muzaffarnagar", "Dist_Code": "133"
             }
             ,
             "geometry": {
@@ -604,7 +604,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Pilibhit", "Dist_Code": "151"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Pilibhit", "Dist_Code": "151"
             }
             ,
             "geometry": {
@@ -615,7 +615,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Pratapgarh", "Dist_Code": "173"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Pratapgarh", "Dist_Code": "173"
             }
             ,
             "geometry": {
@@ -626,7 +626,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Rae Bareli", "Dist_Code": "158"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Rae Bareli", "Dist_Code": "158"
             }
             ,
             "geometry": {
@@ -637,7 +637,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Rampur", "Dist_Code": "136"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Rampur", "Dist_Code": "136"
             }
             ,
             "geometry": {
@@ -648,7 +648,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Saharanpur", "Dist_Code": "132"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Saharanpur", "Dist_Code": "132"
             }
             ,
             "geometry": {
@@ -659,7 +659,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sant Kabir Nagar", "Dist_Code": "186"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sant Kabir Nagar", "Dist_Code": "186"
             }
             ,
             "geometry": {
@@ -670,7 +670,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sant Ravidas Nagar (Bhadohi)", "Dist_Code": "198"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sant Ravidas Nagar (Bhadohi)", "Dist_Code": "198"
             }
             ,
             "geometry": {
@@ -681,7 +681,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Shahjahanpur", "Dist_Code": "152"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Shahjahanpur", "Dist_Code": "152"
             }
             ,
             "geometry": {
@@ -692,7 +692,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Shravasti", "Dist_Code": "181"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Shravasti", "Dist_Code": "181"
             }
             ,
             "geometry": {
@@ -703,7 +703,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Siddharthnagar", "Dist_Code": "184"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Siddharthnagar", "Dist_Code": "184"
             }
             ,
             "geometry": {
@@ -714,7 +714,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sitapur", "Dist_Code": "154"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sitapur", "Dist_Code": "154"
             }
             ,
             "geometry": {
@@ -725,7 +725,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sonbhadra", "Dist_Code": "200"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sonbhadra", "Dist_Code": "200"
             }
             ,
             "geometry": {
@@ -736,7 +736,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sultanpur", "Dist_Code": "179"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sultanpur", "Dist_Code": "179"
             }
             ,
             "geometry": {
@@ -747,7 +747,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Unnao", "Dist_Code": "156"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Unnao", "Dist_Code": "156"
             }
             ,
             "geometry": {
@@ -758,7 +758,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Varanasi", "Dist_Code": "197"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Varanasi", "Dist_Code": "197"
             }
             ,
             "geometry": {
@@ -769,7 +769,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Ghaziabad", "Dist_Code": "140"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Ghaziabad", "Dist_Code": "140"
             }
             ,
             "geometry": {
@@ -780,7 +780,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Shamli", "Dist_Code": null
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Shamli", "Dist_Code": null
             }
             ,
             "geometry": {
@@ -791,7 +791,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Sambhal", "Dist_Code": null
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Sambhal", "Dist_Code": null
             }
             ,
             "geometry": {
@@ -802,7 +802,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Amethi", "Dist_Code": null
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Amethi", "Dist_Code": null
             }
             ,
             "geometry": {
@@ -813,7 +813,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Kasganj", "Dist_Code": "202"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Kasganj", "Dist_Code": "202"
             }
             ,
             "geometry": {
@@ -824,7 +824,7 @@
         {
             "type": "Feature",
             "properties": {
-                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "Dist_Name": "Mathura", "Dist_Code": "145"
+                "REMARKS_2": null, "Country": "India", "State_Name": "Uttar Pradesh", "State_Code": "09", "name": "Mathura", "Dist_Code": "145"
             }
             ,
             "geometry": {

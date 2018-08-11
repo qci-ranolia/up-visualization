@@ -62,7 +62,7 @@ export class Section2Component implements OnInit {
       }
     };
     this.option1 = {
-      // color: this.color,
+      color:['lightskyblue','yellow','orangered'],
       title: {
         text: this.graph1name,
         // subtext: 'test2',
