@@ -87,6 +87,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option1 = {
+      color:['lightskyblue','yellow','orangered'],
       // color: this.color,
       title: {
         text: this.graph1name,
@@ -179,6 +180,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option3 = {
+      color:['lightskyblue','yellow','orangered'],
       // color: this.color,
       title: {
         text: this.graph3name,

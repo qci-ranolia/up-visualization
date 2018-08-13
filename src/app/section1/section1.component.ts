@@ -128,7 +128,7 @@ export class Section1Component implements OnInit {
                   { name: 'Farrukhabad', value: 2400, extra: 1000 },
                   { name: 'Fatehpur', value: 2500, extra: 1000 },
                   { name: 'Firozabad', value: 2600, extra: 1000 },
-                  { name: 'GB Nagar', value: 2700, extra: 1000 },
+                  { name: 'Gautam Buddha Nagar', value: 2700, extra: 1000 },
                   { name: 'Hapur', value: 2800, extra: 1000 },
                   { name: 'Ghazipur', value: 2900, extra: 1000 },
                   { name: 'Gonda', value: 3000, extra: 1000 },
@@ -161,8 +161,8 @@ export class Section1Component implements OnInit {
                   { name: 'Rae Bareli', value: 5700, extra: 10400 },
                   { name: 'Rampur', value: 5800, extra: 10010 },
                   { name: 'Saharanpur', value: 5900, extra: 1000 },
-                  { name: 'St Kabir Nagar', value: 6000, extra: 1000 },
-                  { name: 'St Ravidas Nagar (Bhadohi)', value: 6100, extra: 1000 },
+                  { name: 'Sant Kabir Nagar', value: 6000, extra: 1000 },
+                  { name: 'Sant Ravidas Nagar (Bhadohi)', value: 6100, extra: 1000 },
                   { name: 'Shahjahanpur', value: 6200, extra: 1000 },
                   { name: 'Shravasti', value: 6300, extra: 1000 },
                   { name: 'Siddharthnagar', value: 6400, extra: 1000 },
@@ -205,7 +205,7 @@ export class Section1Component implements OnInit {
                   'Farrukhabad': 'Farrukhabad',
                   'Fatehpur': 'Fatehpur',
                   'Firozabad': 'Firozabad',
-                  'GB Nagar': 'GB Nagar',
+                  'Gautam Buddha Nagar': 'Gautam Buddha Nagar',
                   'Hapur': 'Hapur',
                   'Ghazipur': 'Ghazipur',
                   'Gonda': 'Gonda',
@@ -238,8 +238,8 @@ export class Section1Component implements OnInit {
                   'Rae Bareli': 'Rae Bareli',
                   'Rampur': 'Rampur',
                   'Saharanpur': 'Saharanpur',
-                  'St Kabir Nagar': 'St Kabir Nagar',
-                  'St Ravidas Nagar (Bhadohi)': 'St Ravidas Nagar (Bhadohi)',
+                  'Sant Kabir Nagar': 'Sant Kabir Nagar',
+                  'Sant Ravidas Nagar (Bhadohi)': 'Sant Ravidas Nagar (Bhadohi)',
                   'Shahjahanpur': 'Shahjahanpur',
                   'Shravasti': 'Shravasti',
                   'Siddharthnagar': 'Siddharthnagar',
@@ -264,6 +264,7 @@ export class Section1Component implements OnInit {
   getTree() {
     const xAxisData = [];
     this.option2 = {
+      /* color:['black'], */
       tooltip: {
         triggerOn: 'mousemove',
         trigger: 'item',
