@@ -53,6 +53,7 @@ export class Section5Component implements OnInit {
   getGraph1() {
 
     this.option1 = {
+      color:['orangered'],
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -79,6 +80,7 @@ export class Section5Component implements OnInit {
   getGraph2() {
 
     this.option2 = {
+      color:['yellow'],
       title: {
         text: this.graph2name,
         // subtext: 'test2',

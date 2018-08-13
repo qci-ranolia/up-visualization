@@ -1,7 +1,6 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-7 s1s1">
-
       <div class="map-chart" echarts [options]="option1" (chartClick)="onMapEvent($event, 'chartClick')">
       </div>
     </div>
@@ -11,6 +10,10 @@
 
       <div class="tree-chart" echarts [options]="option2" (chartClick)="onchart1Event($event, 'chartClick')">
       </div>
+      <!--<div class="row">
+        <div class="col-12 s1s2s1"></div>
+        <div class="col-12 s1s2s2"></div>
+      </div>-->
     </div>
   </div>
 </div>
