@@ -27,7 +27,7 @@ export class Section3Component implements OnInit {
   graph4data2 : any = [];
   option1_data1: any;
   option1_legends: any;
-
+  colors:any
   constructor(private projectService: ProjectService) {
 
     this.projectService.emitSection3Graph1.subscribe(res=>{
@@ -51,18 +51,22 @@ export class Section3Component implements OnInit {
       this.getGraph3();
     });
 
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors = res
+    })
+
   }
 
   ngOnInit() {
     this.projectService.getSection3Graph1();
     this.projectService.getSection3Graph2();
     this.projectService.getSection3Graph3();
+    this.projectService.getColors()
   }
 
   getGraph1() {
-
     this.option1 = {
-      color:['lightskyblue'],
+      color:[this.colors[0]],
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -83,12 +87,12 @@ export class Section3Component implements OnInit {
           data: this.graph1data2,
           type: 'bar'
       }]
-    };
+    }
   }
 
   getGraph2() {
     this.option2 = {
-      color:['yellow'],
+      color:[this.colors[1]],
       title: {
         text: this.graph2name,
         // subtext: 'test2',
@@ -109,33 +113,32 @@ export class Section3Component implements OnInit {
           data: this.graph2data2,
           type: 'bar'
       }]
-    };
+    }
   }
 
   getGraph3() {
-    this.option3 = {
-      color:['orangered'],
-      title: {
-        text: this.graph3name,
-        // subtext: 'test2',
+    this.option3={
+      color:[[this.colors[2]]],
+      title:{
+        text:this.graph3name,
       },
-      xAxis: {
-          type: 'category',
-          data: this.graph3data1
+      xAxis:{
+        type:'category',
+        data:this.graph3data1
       },
-      yAxis: {
-          type: 'value'
+      yAxis:{
+        type:'value'
       },
-      tooltip : {
-          trigger: 'item',
-          formatter: "{a} <br/>{b} : {c} "
+      tooltip:{
+        trigger:'item',
+        formatter:"{a} <br/>{b} : {c}"
       },
       series: [{
-          name:this.graph3name,
-          data: this.graph3data2,
-          type: 'bar'
+        name:this.graph3name,
+        data:this.graph3data2,
+        type:'bar'
       }]
-    };
+    }
   }
 
 

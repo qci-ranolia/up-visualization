@@ -27,6 +27,7 @@ export class Section5Component implements OnInit {
     graph4data2 : any = [];
     option1_data1: any;
     option1_legends: any;
+    colors:any
 
   constructor(private projectService: ProjectService) {
 
@@ -43,17 +44,21 @@ export class Section5Component implements OnInit {
       this.graph2name = res.name;
       this.getGraph2();
     });
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors=res
+    })
   }
 
   ngOnInit() {
     this.projectService.getSection5Graph1();
     this.projectService.getSection5Graph2();
+    this.projectService.getColors()
   }
 
   getGraph1() {
 
     this.option1 = {
-      color:['orangered'],
+      color:[this.colors[2]],
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -80,7 +85,7 @@ export class Section5Component implements OnInit {
   getGraph2() {
 
     this.option2 = {
-      color:['yellow'],
+      color:[this.colors[1]],
       title: {
         text: this.graph2name,
         // subtext: 'test2',

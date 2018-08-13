@@ -26,6 +26,7 @@ export class Section2Component implements OnInit {
   graph4data2:any = []
   option1_data1:any
   option1_legends:any
+  colors:any
 
   constructor( private projectService: ProjectService) {
     this.projectService.emitSection2Graph1.subscribe(res=>{
@@ -33,18 +34,22 @@ export class Section2Component implements OnInit {
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1()
-    });
+    })
     this.projectService.emitSection2Graph3.subscribe(res=>{
       this.graph3data1 = res.legends;
       this.graph3data2 = res.data;
       this.graph3name = res.name;
       this.getGraph3()
-    });
+    })
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors = res
+    })
   }
   ngOnInit() {
     this.projectService.getSection2Graph1()
     this.projectService.getSection2Graph2()
     this.projectService.getSection2Graph3()
+    this.projectService.getColors()
     this.getGraph2()
   }
   getGraph1() {
@@ -57,9 +62,9 @@ export class Section2Component implements OnInit {
         borderWidth: 3,
         borderColor: '#235894'
       }
-    };
+    }
     this.option1 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       title:{
         text: this.graph1name,
         // subtext: 'test2',
@@ -133,11 +138,11 @@ export class Section2Component implements OnInit {
                   }
               }
           ]
-      };
+      }
   }
   getGraph2() {
     this.option2={
-      color:['orangered'],
+      color:[this.colors[2]],
       tooltip:{
       },
       legend:{
@@ -214,9 +219,9 @@ export class Section2Component implements OnInit {
         borderWidth: 3,
         borderColor: '#235894'
       }
-    };
+    }
     this.option3 = {
-      color:['yellow','orangered'],
+      color:[this.colors[1],this.colors[2]],
       title:{
         text: this.graph3name,
         // subtext: 'test2',
@@ -292,6 +297,6 @@ export class Section2Component implements OnInit {
                   }
               }
           ]
-      };
+      }
   }
 }

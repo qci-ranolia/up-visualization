@@ -38,7 +38,7 @@ export class Section6Component implements OnInit {
   graph4data2 : any = [];
   option1_data1: any;
   option1_legends: any;
-
+  colors:any
   constructor(private projectService: ProjectService) {
 
     this.projectService.emitSection6Graph1.subscribe(res=>{
@@ -66,6 +66,9 @@ export class Section6Component implements OnInit {
       this.graph3name = res.name;
       this.getGraph3();
     });
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors=res
+    })
 
   }
 
@@ -73,6 +76,7 @@ export class Section6Component implements OnInit {
     this.projectService.getSection6Graph1();
     this.projectService.getSection6Graph2();
     this.projectService.getSection6Graph3();
+    this.projectService.getColors()
   }
 
   getGraph1() {
@@ -87,7 +91,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option1 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       // color: this.color,
       title: {
         text: this.graph1name,
@@ -180,7 +184,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option3 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       // color: this.color,
       title: {
         text: this.graph3name,

@@ -6,33 +6,38 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ProjectService {
 
-  emitMap = new EventEmitter<any>();
-  emitTree = new EventEmitter<any>();
-  emitSection2Graph1 = new EventEmitter<any>();
-  emitSection2Graph2 = new EventEmitter<any>();
-  emitSection2Graph3 = new EventEmitter<any>();
-  emitSection3Graph1 = new EventEmitter<any>();
-  emitSection3Graph2 = new EventEmitter<any>();
-  emitSection3Graph3 = new EventEmitter<any>();
-  emitSection4Graph1 = new EventEmitter<any>();
-  emitSection5Graph1 = new EventEmitter<any>();
-  emitSection5Graph2 = new EventEmitter<any>();
-  emitSection6Graph1 = new EventEmitter<any>();
-  emitSection6Graph2 = new EventEmitter<any>();
-  emitSection6Graph3 = new EventEmitter<any>();
+  emitMap = new EventEmitter<any>()
+  emitTree = new EventEmitter<any>()
+  emitColors = new EventEmitter<any>()
+  emitSection2Graph1 = new EventEmitter<any>()
+  emitSection2Graph2 = new EventEmitter<any>()
+  emitSection2Graph3 = new EventEmitter<any>()
+  emitSection3Graph1 = new EventEmitter<any>()
+  emitSection3Graph2 = new EventEmitter<any>()
+  emitSection3Graph3 = new EventEmitter<any>()
+  emitSection4Graph1 = new EventEmitter<any>()
+  emitSection5Graph1 = new EventEmitter<any>()
+  emitSection5Graph2 = new EventEmitter<any>()
+  emitSection6Graph1 = new EventEmitter<any>()
+  emitSection6Graph2 = new EventEmitter<any>()
+  emitSection6Graph3 = new EventEmitter<any>()
 
-  constructor(private APIService: APIService) {}
+  constructor( private APIService : APIService ) {}
+
+  getColors(){
+    this.emitColors.emit(['lightskyblue','yellow','#169487','grey'])
+  }
 
   getMap() {
     this.APIService.GetMap().subscribe(res=>{
       // console.log(res);
       if(res){
-        this.emitMap.emit({map:res});
-      } else {
-        alert('Error 10');
+        this.emitMap.emit({map:res})
+      }else{
+        alert('Error 10')
       }
-    }, err=>{
-      alert('Error 11');
+    },err=>{
+      alert('Error 11')
     });
   }
 
@@ -40,13 +45,13 @@ export class ProjectService {
     this.APIService.GetTree().subscribe(res=>{
 
       if(res) {
-        this.emitTree.emit({tree:res});
+        this.emitTree.emit({tree:res})
       } else {
-        alert('Error 20');
+        alert('Error 20')
       }
     }, err=>{
-      alert('Error 21');
-    });
+      alert('Error 21')
+    })
   }
 
   getSection2Graph1() {

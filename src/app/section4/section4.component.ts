@@ -27,6 +27,7 @@ export class Section4Component implements OnInit {
   graph4data2 : any = [];
   option1_data1: any;
   option1_legends: any;
+  colors:any
 
   constructor(private projectService: ProjectService) {
 
@@ -35,8 +36,10 @@ export class Section4Component implements OnInit {
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1();
-    });
-
+    })
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors = res
+    })
   }
 
   ngOnInit() {
@@ -55,7 +58,7 @@ export class Section4Component implements OnInit {
       }
     };
     this.option1 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -88,12 +91,12 @@ export class Section4Component implements OnInit {
           series : [
               {
                 title: {
-                    // text: 'Customized Pie',
-                    left: 'center',
-                    top: 10,
-                    textStyle: {
-                        color: 'white'
-                    }
+                  // text: 'Customized Pie',
+                  left: 'center',
+                  top: 10,
+                  textStyle: {
+                    color: 'white'
+                  }
                 },
                   name:this.graph1name,
                   type:'pie',
@@ -104,31 +107,30 @@ export class Section4Component implements OnInit {
                   // roseType: 'radius',
                   label: {
                     show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                    normal: {
+                      show: false,
+                      textStyle: {
+                        color: 'black'
                       }
+                    }
                   },
                   // color: this.color,
                   labelLine: {
                     show: false,
-                      normal: {show: false,
-                          lineStyle: {
-                            show: false,
-                              // color: 'rgba(255, 255, 255, 0.3)'
-                          },
-                          smooth: 0.2,
-                          length: 5,
-                          length2: 2
-                      }
+                    normal: {show: false,
+                      lineStyle: {
+                        show: false,
+                          // color: 'rgba(255, 255, 255, 0.3)'
+                      },
+                      smooth: 0.2,
+                      length: 5,
+                      length2: 2
+                    }
                   },
-
                   animationType: 'scale',
                   animationEasing: 'elasticOut',
                   animationDelay: function (idx) {
-                      return Math.random() * 200;
+                    return Math.random() * 200;
                   }
               }
           ]

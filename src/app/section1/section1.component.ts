@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectService } from '../services/ProjectService';
-import { NgxEchartsService } from 'ngx-echarts';
+import { Component, OnInit } from '@angular/core'
+import { ProjectService } from '../services/ProjectService'
+import { NgxEchartsService } from 'ngx-echarts'
 
 @Component({
   selector: 'app-section1',
@@ -8,42 +8,40 @@ import { NgxEchartsService } from 'ngx-echarts';
   styleUrls: ['./section1.component.scss']
 })
 export class Section1Component implements OnInit {
-
-  map : any = [];
-  mapLoaded = false;
-  option1: any;
-  option2: any;
-  treeData: any;
-
+  map:any=[]
+  mapLoaded=false
+  option1:any
+  option2:any
+  treeData:any
+  colors:any
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
-
     this.projectService.emitMap.subscribe(res=>{
-      this.map = res.map;
-      this.getMap();
-    });
-
+      this.map = res.map
+      this.getMap()
+    })
     this.projectService.emitTree.subscribe(res=>{
-      this.treeData = res.tree;
-      this.getTree();
-    });
-
+      this.treeData = res.tree
+      this.getTree()
+    })
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors = res
+    })
   }
-
   ngOnInit() {
-    this.projectService.getMap();
-    this.projectService.getTree();
+    this.projectService.getMap()
+    this.projectService.getTree()
+    this.projectService.getColors()
   }
-
   getMap() {
-    console.log(this.map);
+    console.log(this.map)
       // fetch map geo JSON data from server
       // this.http.get('assets/data/HK.json')
       //   .subscribe(geoJson => {
           // hide loading:
-          this.mapLoaded = true;
+          this.mapLoaded = true
           // register map:
-          this.es.registerMap('USA', this.map);
+          this.es.registerMap('USA', this.map)
           // update options:
           this.option1 = {
             title: {
@@ -79,7 +77,7 @@ export class Section1Component implements OnInit {
               realtime:false,
               calculable:true,
               inRange:{
-                color:['lightskyblue','yellow','orangered']
+                color:this.colors
               }
             },
             series: [
@@ -87,18 +85,18 @@ export class Section1Component implements OnInit {
                 name: '香港18区人口密度',
                 type: 'map',
                 mapType: 'USA', // map type should be registered
-                zoom: 1.3,
+                zoom: 1.2,
                 roam: true,
                 itemStyle: {
                   normal: { label: { show: false } },
                   emphasis: {
-                    areaColor: null,
+                    areaColor:'#fff',
                     shadowOffsetX: 0,
                     shadowOffsetY: 0,
                     shadowBlur: 20,
-                    borderColor: '#fff',
-                    borderWidth: 1,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    borderColor:'#fff',
+                    borderWidth:1,
+                    shadowColor:'rgba(0, 0, 0, 0.3)'
                   }
                 },
                 data: [
@@ -257,12 +255,11 @@ export class Section1Component implements OnInit {
                 }
               }
             ]
-          };
+          }
         // });
     }
-
   getTree() {
-    const xAxisData = [];
+    const xAxisData = []
     this.option2 = {
       /* color:['black'], */
       tooltip: {
@@ -306,7 +303,7 @@ export class Section1Component implements OnInit {
           animationDurationUpdate: 750
         }
       ]
-    };
+    }
   }
 
   onMapEvent(event: any, type: string) {
