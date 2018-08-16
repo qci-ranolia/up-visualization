@@ -40,10 +40,20 @@ export class Section4Component implements OnInit {
     this.projectService.emitColors.subscribe(res=>{
       this.colors = res
     })
+
+    this.projectService.emitSection4Graph2.subscribe(res=>{
+      console.log(res);
+      this.graph2data1 = res.legends;
+      this.graph2data2 = res.data;
+      this.graph2name = res.name;
+      this.getGraph2();
+    });
+
   }
 
   ngOnInit() {
     this.projectService.getSection4Graph1();
+    this.projectService.getSection4Graph2();
   }
 
   getGraph1() {
@@ -82,8 +92,8 @@ export class Section4Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x:'center',
+            y:'bottom',
             // data:this.option1_legends
             data : this.graph1data1
           },
@@ -105,14 +115,15 @@ export class Section4Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph1data2,
                   // roseType: 'radius',
-                  label: {
+                  label:{
                     show: false,
-                    normal: {
-                      show: false,
-                      textStyle: {
-                        color: 'black'
+                      normal:{
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
-                    }
                   },
                   // color: this.color,
                   labelLine: {
@@ -135,6 +146,33 @@ export class Section4Component implements OnInit {
               }
           ]
       };
+  }
+
+  getGraph2() {
+
+    this.option2 = {
+      color:[this.colors[1]],
+      title: {
+        text: this.graph2name,
+        // subtext: 'test2',
+      },
+      xAxis: {
+          type: 'category',
+          data: this.graph2data1
+      },
+      yAxis: {
+          type: 'value'
+      },
+      tooltip : {
+          trigger: 'item',
+          formatter: "{a} <br/>{b} : {c} "
+      },
+      series: [{
+          name:this.graph2name,
+          data: this.graph2data2,
+          type: 'bar'
+      }]
+    };
   }
 
 

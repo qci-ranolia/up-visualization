@@ -1,23 +1,46 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-4 p-2">
-      <div class="col-sm-12 s6s1">
-        <!-- <h5>{{heading1}}  <b> {{count1}} </b> </h5> -->
-        <div echarts [options]="option1" ></div>
+      <div class="col-sm-12 s6s1 pt-3 pb-3">
+        <!-- <h5>{{heading1}}  <b> {{count1}} </b> </h5>
+         --><div class="donut-chart" echarts [options]="option1" ></div>
       </div>
     </div>
     <div class="col-4 p-2">
-      <div class="col-sm-12 s6s2">
-        <h4>Villages</h4> <br>
-        <b>{{data21}}</b> &nbsp;  {{count21}}<br>
-        <b>{{data22}}</b> &nbsp;  {{count22}}<br>
-        <b>{{data23}}</b> &nbsp;  {{count23}}<br>
+      <div class="col-sm-12 s6s2 pt-3 pb-3">
+        <h3>Villages</h3>
+        <div class="row col-sm-12 m-0 p-0">
+          <div class="col-sm-12 mb-3">
+            <div class="border br-rnd">
+              <strong class="d-block col-sm-12 row m-0">
+                <h6 class="col-sm-10 float-left pl-0 pr-0 pt-1 m-0 text-muted text-left">{{data21}}</h6>
+                <p class="col-sm-2 float-right p-0">&nbsp;&nbsp;{{count21}}</p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-sm-12 mb-3">
+            <div class="border br-rnd">
+              <strong class="d-block col-sm-12 row m-0">
+                <h6 class="col-sm-10 float-left pl-0 pr-0 pt-1 m-0 text-muted text-left">{{data22}}</h6>
+                <p class="col-sm-2 float-right p-0">&nbsp;&nbsp;{{count22}}</p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-sm-12 mb-3">
+            <div class="border br-rnd">
+              <strong class="d-block col-sm-12 row m-0">
+                <h6 class="col-sm-10 float-left pl-0 pr-0 pt-1 m-0 text-muted text-left">{{data23}}</h6>
+                <p class="col-sm-2 float-right p-0">&nbsp;&nbsp;{{count23}}</p>
+              </strong>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-4 p-2">
-      <div class="col-sm-12 s6s3">
-        <!-- <h5>Number of Aanganwadi covered  <b> 10 </b> </h5> -->
-        <div echarts [options]="option3" ></div>
+      <div class="col-sm-12 s6s3 pt-3 pb-3">
+        <!-- <h5>Number of Aanganwadi covered  <b> 10 </b> </h5>
+         --><div class="donut-chart" echarts [options]="option3" ></div>
       </div>
     </div>
   </div>

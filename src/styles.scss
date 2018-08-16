@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 $section1Height: 450px;
-$sectionHeight2: 400px;
-$sectionHeight3: 400px;
+$sectionHeight2: 420px;
+$sectionHeight3: 420px;
 $boxShadow:0 2px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 0px 5px 0 rgba(0, 0, 0, 0.12);
 $themeBorder:1px solid #e0e0e0;
 $chartHeight:90%;
+$dHeight:100%;
+$br-rnd:100px;
+$bx-shdw:1px 3px 2px -2px #ccc;
 
 body{
   padding:0;
@@ -16,59 +19,74 @@ body{
 }
 .bg-white{
   box-shadow:$boxShadow;
-  height:100%;
+  height:$chartHeight;
   border-radius:5px;
   background:#f8f9fa;
 }
 .section1, .section2, .section3, .section4 {
-  height: $sectionHeight2;
+  height:$sectionHeight2;
   border:$themeBorder;
-  margin-bottom: 10px;
+  margin-bottom:10px;
 }
 .section1 {
-  margin-top: 25px;
-  height: $section1Height;
-  border: 0px;
+  margin-top:25px;
+  height:$section1Height;
+  border:0px;
 }
-.s1s1, .s1s2{
-  height: $section1Height;
+.s1s1, .s1s2 {
+  height:$section1Height;
   // border: $themeBorder;
 }
-.section2{
-  border: 0px;
+.section2 {
+  border:0px;
 }
-.s2s1, .s2s2, .s2s3{
+.s2s1, .s2s2, .s2s3 {
   // border: $themeBorder;
-  height: $sectionHeight2;
+  height:$sectionHeight2;
 }
-.section3{
-  border: 0px;
+.section3 {
+  border:0px;
 }
-.s3s1, .s3s2, .s3s3{
+.s3s1, .s3s2, .s3s3 {
   // border: $themeBorder;
-  height: $sectionHeight2;
+  height:$sectionHeight2;
 }
-.section4{
-  border: 0px;
+.section4 {
+  border:0px;
 }
-.s4s1, .s4s2, .s4s3{
+.s4s1, .s4s2, .s4s3 {
   // border: $themeBorder;
-  height: $sectionHeight2;
+  height:$sectionHeight2;
 }
-.section5{
-  border: 0px;
+.section5 {
+  border:0px;
 }
-.s5s1, .s5s2, .s5s3{
-  // border: $themeBorder;
-  height: $sectionHeight2;
+.s5s1, .s5s2, .s5s3 {
+  //border:$themeBorder;
+  height:$sectionHeight2;
 }
-.section6{
-  border: 0px;
+.section6 {
+  border:0px;
 }
-.s6s1, .s6s2, .s6s3{
-  border: $themeBorder;
-  height: $sectionHeight2;
+.s6s1, .s6s2, .s6s3 {
+  border:$themeBorder;
+  height:$sectionHeight2;
 }
-.map-chart{
-  height:100%;
+.map-chart {
+  height:$dHeight;
+}.bar-chart{
+  height:$dHeight;
+}.donut-chart{
+  height:$dHeight;
+}
+.ts {
+  height:$dHeight;
+}
+.br-rnd{
+  border-radius:$br-rnd
+}
+.border.br-rnd{
+  height:50px;
+  line-height:50px;
+  box-shadow:$bx-shdw 
 }

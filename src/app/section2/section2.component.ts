@@ -34,7 +34,7 @@ export class Section2Component implements OnInit {
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1()
-    })
+    });
     this.projectService.emitSection2Graph3.subscribe(res=>{
       this.graph3data1 = res.legends;
       this.graph3data2 = res.data;
@@ -53,16 +53,6 @@ export class Section2Component implements OnInit {
     this.getGraph2()
   }
   getGraph1() {
-    let itemStyle = {
-      normal:{
-        opacity:0.7,
-        color:{
-          // repeat: 'repeat'
-        },
-        borderWidth: 3,
-        borderColor: '#235894'
-      }
-    }
     this.option1 = {
       color:this.colors,
       title:{
@@ -78,16 +68,16 @@ export class Section2Component implements OnInit {
         formatter: "{a} <br/>{b} :{c} ({d}%)"
       },
       visualMap:{
-        show: false,
-        min: -220,
-        max: 3000,
+        show:false,
+        min:-220,
+        max:3000,
         inRange:{
             // colorLightness: [0, 1]
         }
       },
       legend:{
-        orient: 'vertical',
-        x: 'right',
+        x:'center',
+        y:'bottom',
         // data:this.option1_legends
         data : this.graph1data1
       },
@@ -111,10 +101,11 @@ export class Section2Component implements OnInit {
                   label:{
                     show: false,
                       normal:{
-                        show: false,
-                          textStyle:{
-                            color: 'black'
-                          }
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,
@@ -244,10 +235,10 @@ export class Section2Component implements OnInit {
             }
         },
         legend:{
-          orient: 'vertical',
-          x: 'right',
+          x:'center',
+          y:'bottom',
           // data:this.option1_legends
-          data : this.graph3data1
+          data:this.graph3data1
         },
 
         series : [
@@ -270,10 +261,11 @@ export class Section2Component implements OnInit {
                   label:{
                     show: false,
                       normal:{
-                        show: false,
-                          textStyle:{
-                              color: 'black'
-                          }
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,

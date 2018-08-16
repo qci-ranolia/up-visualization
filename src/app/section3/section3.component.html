@@ -1,23 +1,29 @@
 <div class="container-fluid">
-
   <div class="row justify-content-center">
-
     <div class="col-4 s3s1 p-2">
-      <div class="col-sm-12 bg-white">
+      <div class="col-sm-12 bg-white pt-3">
         <!-- Type of Disposal- Bar Chart -->
-        <div echarts [options]="option1" ></div>
+        <div class="bar-chart tod" echarts [options]="option1"></div>
+        <span class="col-sm-12 d-block row m-0" style="position:relative;top:-40px;">
+	        <small class="col-sm-6 float-left">Safe disposal data</small>
+          <small class="col-sm-6 float-left">Unsafe disposal data</small>
+          <small class="col-sm-6 float-left">Safe disposal data</small>
+          <small class="col-sm-6 float-left">Unsafe disposal data</small>
+          <small class="col-sm-6 float-left">Safe disposal data</small>
+          <small class="col-sm-6 float-left">Unsafe disposal data</small>
+        </span>
       </div>
     </div>
     <div class="col-4 s3s2 p-2">
-      <div class="col-sm-12 bg-white">
+      <div class="col-sm-12 bg-white pt-3">
         <!-- Incidents of open defecation- Bar Chart -->
-        <div echarts [options]="option2" ></div>
+        <div class="bar-chart" echarts [options]="option2"></div>
       </div>
     </div>
     <div class="col-4 s3s3 p-2">
-      <div class="col-sm-12 bg-white">
+      <div class="col-sm-12 bg-white pt-3">
         <!-- Acailablity of water -->
-        <div echarts [options]="option3" ></div>
+        <div class="bar-chart" echarts [options]="option3"></div>
       </div>
     </div>
   </div>

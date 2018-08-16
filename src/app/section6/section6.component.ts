@@ -41,7 +41,9 @@ export class Section6Component implements OnInit {
   colors:any
   constructor(private projectService: ProjectService) {
 
-    this.projectService.emitSection6Graph1.subscribe(res=>{
+
+    this.projectService.emitSection6Graph1.subscribe(res => {
+
       this.graph1data1 = res.legends;
       this.graph1data2 = res.data;
       this.graph1name = res.name;
@@ -60,7 +62,7 @@ export class Section6Component implements OnInit {
       console.log(res);
     });
 
-    this.projectService.emitSection6Graph3.subscribe(res=>{
+    this.projectService.emitSection6Graph3.subscribe(res => {
       this.graph3data1 = res.legends;
       this.graph3data2 = res.data;
       this.graph3name = res.name;
@@ -106,7 +108,6 @@ export class Section6Component implements OnInit {
               trigger: 'item',
               formatter: "{a} <br/>{b} : {c} ({d}%)"
           },
-
           visualMap: {
               show: false,
               min: -220,
@@ -116,8 +117,8 @@ export class Section6Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x:'center',
+            y:'bottom',
             // data:this.option1_legends
             data : this.graph1data1
           },
@@ -139,13 +140,14 @@ export class Section6Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph1data2,
                   // roseType: 'radius',
-                  label: {
+                  label:{
                     show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                      normal:{
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,
@@ -175,7 +177,7 @@ export class Section6Component implements OnInit {
   getGraph3() {
     let itemStyle = {
       normal: {
-        opacity:0.7,
+        opacity: 0.7,
         color: {
           // repeat: 'repeat'
         },
@@ -209,8 +211,8 @@ export class Section6Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x: 'center',
+            y: 'bottom',
             // data:this.option1_legends
             data : this.graph3data1
           },
@@ -232,13 +234,14 @@ export class Section6Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph3data2,
                   // roseType: 'radius',
-                  label: {
-                    show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                  label : {
+                    show:false,
+                      normal:{
+                        show:true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,

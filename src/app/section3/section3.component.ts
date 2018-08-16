@@ -85,7 +85,8 @@ export class Section3Component implements OnInit {
       series: [{
           name:this.graph1name,
           data: this.graph1data2,
-          type: 'bar'
+          type: 'bar',
+          barWidth: '50%',
       }]
     }
   }
@@ -111,7 +112,8 @@ export class Section3Component implements OnInit {
       series: [{
           name:this.graph2name,
           data: this.graph2data2,
-          type: 'bar'
+          type: 'bar',
+          barWidth: '50%',
       }]
     }
   }
@@ -136,7 +138,8 @@ export class Section3Component implements OnInit {
       series: [{
         name:this.graph3name,
         data:this.graph3data2,
-        type:'bar'
+        type:'bar',
+        barWidth: '50%',
       }]
     }
   }

@@ -16,6 +16,7 @@ export class ProjectService {
   emitSection3Graph2 = new EventEmitter<any>()
   emitSection3Graph3 = new EventEmitter<any>()
   emitSection4Graph1 = new EventEmitter<any>()
+  emitSection4Graph2 = new EventEmitter<any>()
   emitSection5Graph1 = new EventEmitter<any>()
   emitSection5Graph2 = new EventEmitter<any>()
   emitSection6Graph1 = new EventEmitter<any>()
@@ -25,199 +26,213 @@ export class ProjectService {
   constructor( private APIService : APIService ) {}
 
   getColors(){
-    this.emitColors.emit(['lightskyblue','yellow','#169487','grey'])
+    this.emitColors.emit(['lightskyblue','yellow','#169487'])
   }
 
   getMap() {
-    this.APIService.GetMap().subscribe(res=>{
+    this.APIService.GetMap().subscribe(res => {
       // console.log(res);
-      if(res){
-        this.emitMap.emit({map:res})
-      }else{
-        alert('Error 10')
+      if (res) {
+        this.emitMap.emit({ map: res });
+      } else {
+        alert('Error 10');
       }
-    },err=>{
-      alert('Error 11')
+    }, err => {
+      alert('Error 11');
     });
   }
 
   getTree() {
-    this.APIService.GetTree().subscribe(res=>{
+    this.APIService.GetTree().subscribe(res => {
 
-      if(res) {
-        this.emitTree.emit({tree:res})
+      if (res) {
+        this.emitTree.emit({ tree: res });
       } else {
         alert('Error 20')
       }
-    }, err=>{
-      alert('Error 21')
-    })
+    }, err => {
+      alert('Error 21');
+    });
   }
 
   getSection2Graph1() {
-    this.APIService.GetGraph1().subscribe(res=>{
+    this.APIService.GetGraph1().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection2Graph1.emit(res);
 
       } else {
         alert('Error 30');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection2Graph2() {
-    this.APIService.GetGraph2().subscribe(res=>{
+    this.APIService.GetGraph2().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection2Graph2.emit(res);
 
       } else {
         alert('Error 40');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection2Graph3() {
-    this.APIService.GetGraph3().subscribe(res=>{
+    this.APIService.GetGraph3().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection2Graph3.emit(res);
 
       } else {
         alert('Error 40');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection3Graph1() {
-    this.APIService.GetGraph4().subscribe(res=>{
+    this.APIService.GetGraph4().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection3Graph1.emit(res);
 
       } else {
         alert('Error 50');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection3Graph2() {
-    this.APIService.GetGraph5().subscribe(res=>{
+    this.APIService.GetGraph5().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection3Graph2.emit(res);
 
       } else {
         alert('Error 60');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection3Graph3() {
-    this.APIService.GetGraph6().subscribe(res=>{
+    this.APIService.GetGraph6().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection3Graph3.emit(res);
 
       } else {
         alert('Error 70');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection4Graph1() {
-    this.APIService.GetGraph7().subscribe(res=>{
+    this.APIService.GetGraph7().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection4Graph1.emit(res);
 
       } else {
         alert('Error 80');
       }
-    }, err=>{
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  getSection4Graph2() {
+    this.APIService.GetGraph8().subscribe(res => {
+      console.log(res);
+      if (res) {
+        this.emitSection4Graph2.emit(res);
+
+      } else {
+        alert('Error 80');
+      }
+    }, err => {
       console.log(err);
     });
   }
 
   getSection5Graph1() {
-    this.APIService.GetGraph10().subscribe(res=>{
+    this.APIService.GetGraph10().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection5Graph1.emit(res);
 
       } else {
         alert('Error 100');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection5Graph2() {
-    this.APIService.GetGraph11().subscribe(res=>{
+    this.APIService.GetGraph11().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection5Graph2.emit(res);
 
       } else {
         alert('Error 110');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection6Graph1() {
-    this.APIService.GetGraph12().subscribe(res=>{
+    this.APIService.GetGraph12().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection6Graph1.emit(res);
 
       } else {
         alert('Error 120');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection6Graph2() {
-    this.APIService.GetGraph13().subscribe(res=>{
+    this.APIService.GetGraph13().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection6Graph2.emit(res);
 
       } else {
         alert('Error 130');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
 
   getSection6Graph3() {
-    this.APIService.GetGraph14().subscribe(res=>{
+    this.APIService.GetGraph14().subscribe(res => {
       console.log(res);
-      if(res) {
+      if (res) {
         this.emitSection6Graph3.emit(res);
 
       } else {
         alert('Error 140');
       }
-    }, err=>{
+    }, err => {
       console.log(err);
     });
   }
