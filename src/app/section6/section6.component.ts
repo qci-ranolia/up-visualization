@@ -59,7 +59,7 @@ export class Section6Component implements OnInit {
       this.count22= res.data2_count;
       this.data23= res.data3;
       this.count23= res.data3_count;
-      console.log(res);
+      // console.log(res);
     });
 
     this.projectService.emitSection6Graph3.subscribe(res => {

@@ -38,7 +38,7 @@ export class Section4Component implements OnInit {
     });
 
     this.projectService.emitSection4Graph2.subscribe(res=>{
-      console.log(res);
+      // console.log(res);
       this.graph2data1 = res.legends;
       this.graph2data2 = res.data;
       this.graph2name = res.name;

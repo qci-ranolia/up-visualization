@@ -52,7 +52,7 @@ export class ProjectService {
 
   getSection2Graph1() {
     this.APIService.GetGraph1().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection2Graph1.emit(res);
 
@@ -66,7 +66,7 @@ export class ProjectService {
 
   getSection2Graph2() {
     this.APIService.GetGraph2().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection2Graph2.emit(res);
 
@@ -80,7 +80,7 @@ export class ProjectService {
 
   getSection2Graph3() {
     this.APIService.GetGraph3().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection2Graph3.emit(res);
 
@@ -94,7 +94,7 @@ export class ProjectService {
 
   getSection3Graph1() {
     this.APIService.GetGraph4().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection3Graph1.emit(res);
 
@@ -108,7 +108,7 @@ export class ProjectService {
 
   getSection3Graph2() {
     this.APIService.GetGraph5().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection3Graph2.emit(res);
 
@@ -122,7 +122,7 @@ export class ProjectService {
 
   getSection3Graph3() {
     this.APIService.GetGraph6().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection3Graph3.emit(res);
 
@@ -136,7 +136,7 @@ export class ProjectService {
 
   getSection4Graph1() {
     this.APIService.GetGraph7().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection4Graph1.emit(res);
 
@@ -150,7 +150,7 @@ export class ProjectService {
 
   getSection4Graph2() {
     this.APIService.GetGraph8().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection4Graph2.emit(res);
 
@@ -164,7 +164,7 @@ export class ProjectService {
 
   getSection5Graph1() {
     this.APIService.GetGraph10().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection5Graph1.emit(res);
 
@@ -178,7 +178,7 @@ export class ProjectService {
 
   getSection5Graph2() {
     this.APIService.GetGraph11().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection5Graph2.emit(res);
 
@@ -192,7 +192,7 @@ export class ProjectService {
 
   getSection6Graph1() {
     this.APIService.GetGraph12().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection6Graph1.emit(res);
 
@@ -206,7 +206,7 @@ export class ProjectService {
 
   getSection6Graph2() {
     this.APIService.GetGraph13().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection6Graph2.emit(res);
 
@@ -220,7 +220,7 @@ export class ProjectService {
 
   getSection6Graph3() {
     this.APIService.GetGraph14().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         this.emitSection6Graph3.emit(res);
 
