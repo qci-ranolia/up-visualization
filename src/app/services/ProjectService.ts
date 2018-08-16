@@ -15,6 +15,7 @@ export class ProjectService {
   emitSection3Graph2 = new EventEmitter<any>();
   emitSection3Graph3 = new EventEmitter<any>();
   emitSection4Graph1 = new EventEmitter<any>();
+  emitSection4Graph2 = new EventEmitter<any>();
   emitSection5Graph1 = new EventEmitter<any>();
   emitSection5Graph2 = new EventEmitter<any>();
   emitSection6Graph1 = new EventEmitter<any>();
@@ -138,6 +139,20 @@ export class ProjectService {
       console.log(res);
       if (res) {
         this.emitSection4Graph1.emit(res);
+
+      } else {
+        alert('Error 80');
+      }
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  getSection4Graph2() {
+    this.APIService.GetGraph8().subscribe(res => {
+      console.log(res);
+      if (res) {
+        this.emitSection4Graph2.emit(res);
 
       } else {
         alert('Error 80');

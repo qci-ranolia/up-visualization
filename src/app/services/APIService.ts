@@ -50,6 +50,10 @@ export class APIService {
     return this.http.get(this.projectURL + 'graph7.json').map(res => res.json());
   }
 
+  GetGraph8() {
+    return this.http.get(this.projectURL + 'graph8.json').map(res => res.json());
+  }
+
   GetGraph10() {
     return this.http.get(this.projectURL + 'graph10.json').map(res => res.json());
   }
