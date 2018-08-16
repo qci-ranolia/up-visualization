@@ -35,6 +35,7 @@ export class Section1Component implements OnInit {
   }
 
   ngOnInit() {
+    this.projectService.getMasterData();
     this.projectService.getMap();
     this.projectService.getTree();
   }
@@ -243,7 +244,9 @@ export class Section1Component implements OnInit {
   }
 
   onMapEvent(event: any, type: string) {
-    console.log('chart event:', type, event);
+
+    this.projectService.getIdFromMap(event.data.id);
+
   }
 
   onTreeEvent(event: any, type: string) {

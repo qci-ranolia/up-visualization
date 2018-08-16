@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ProjectService {
 
+  emitId = new EventEmitter<any>();
   emitMap = new EventEmitter<any>();
   emitTree = new EventEmitter<any>();
   emitSection2Graph1 = new EventEmitter<any>();
@@ -21,8 +22,53 @@ export class ProjectService {
   emitSection6Graph1 = new EventEmitter<any>();
   emitSection6Graph2 = new EventEmitter<any>();
   emitSection6Graph3 = new EventEmitter<any>();
+  masterData : any = [];
+  id = 0;
 
-  constructor(private APIService: APIService) { }
+  constructor(private APIService: APIService) {}
+
+  getMasterData() {
+    this.APIService.GetMasterData().subscribe(res => {
+      console.log(res);
+      if (res) {
+        this.masterData = res.data;
+        this.getDatafromMaster(this.id);
+      } else {
+        alert('Error 0');
+      }
+    }, err => {
+      alert('Error 1');
+    });
+  }
+
+  getIdFromMap(id) {
+    this.id = id;
+    console.log(id);
+    if(id<=76) {
+      this.getDatafromMaster(id);
+    } else {
+      this.getDatafromServer(id);
+    }
+  }
+
+  getDatafromMaster(id) {
+
+    let temp = this.masterData[id];
+    this.emitSection2Graph1.emit(temp.Graph1);
+    this.emitSection2Graph2.emit(temp.Graph2);
+    this.emitSection2Graph3.emit(temp.Graph3);
+    this.emitSection3Graph1.emit(temp.Graph4);
+    this.emitSection3Graph2.emit(temp.Graph5);
+    this.emitSection3Graph3.emit(temp.Graph6);
+    this.emitSection4Graph1.emit(temp.Graph7);
+    this.emitSection4Graph2.emit(temp.Graph8);
+    this.emitSection5Graph1.emit(temp.Graph10);
+    this.emitSection5Graph2.emit(temp.Graph11);
+    this.emitSection6Graph1.emit(temp.Graph12);
+    this.emitSection6Graph2.emit(temp.Graph13);
+    this.emitSection6Graph3.emit(temp.Graph14);
+
+  }
 
   getMap() {
     this.APIService.GetMap().subscribe(res => {

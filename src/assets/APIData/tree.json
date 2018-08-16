@@ -1,32 +1,61 @@
 {
- "name": "flare",
+ "name": "UP",
  "children": [
   {
-   "name": "analytics",
+   "name": "North",
    "collapsed": true,
    "children": [
     {
-     "name": "cluster",
+     "name": "District1",
      "children": [
-      {"name": "AgglomerativeCluster", "value": 3938},
-      {"name": "CommunityStructure", "value": 3812},
-      {"name": "HierarchicalCluster", "value": 6714},
-      {"name": "MergeEdge", "value": 743}
+      {
+        "name": "Block1",
+        "collapsed": true,
+        "children":[
+          {"name": "village1", "value": 3812},
+          {"name": "village2", "value": 3812},
+          {"name": "village3", "value": 3812}
+        ]
+
+      },
+      {
+        "name": "Block2",
+        "collapsed": true,
+        "children":[
+          {"name": "village4", "value": 3812},
+          {"name": "village5", "value": 3812},
+          {"name": "village6", "value": 3812}
+        ]
+      },
+      {"name": "Block3",
+        "collapsed": true,
+        "children":[
+          {"name": "village7", "value": 3812},
+          {"name": "village8", "value": 3812},
+          {"name": "village9", "value": 3812}
+        ]
+      },
+      {"name": "Block4",
+        "collapsed": true,
+        "children":[
+          {"name": "village10", "value": 3812},
+          {"name": "village11", "value": 3812},
+          {"name": "village12", "value": 3812}
+        ]
+      }
      ]
     },
     {
-     "name": "graph",
+     "name": "District2",
      "collapsed": true,
      "children": [
-      {"name": "BetweennessCentrality", "value": 3534},
-      {"name": "LinkDistance", "value": 5731},
-      {"name": "MaxFlowMinCut", "value": 7840},
-      {"name": "ShortestPaths", "value": 5914},
-      {"name": "SpanningTree", "value": 3416}
+      {"name": "Block5", "value": 3534},
+      {"name": "Block6", "value": 5731},
+      {"name": "Block7", "value": 7840}
      ]
     },
     {
-     "name": "optimization",
+     "name": "District3",
      "collapsed": true,
      "children": [
       {"name": "AspectRatioBanker", "value": 7074}
@@ -35,7 +64,7 @@
    ]
   },
   {
-   "name": "animate",
+   "name": "West",
    "collapsed": true,
    "children": [
     {"name": "Easing", "value": 17010},
@@ -66,7 +95,7 @@
    ]
   },
   {
-   "name": "data",
+   "name": "East",
    "collapsed": true,
    "children": [
     {
@@ -89,34 +118,13 @@
    ]
   },
   {
-   "name": "display",
+   "name": "South",
    "collapsed": true,
    "children": [
     {"name": "DirtySprite", "value": 8833},
     {"name": "LineSprite", "value": 1732},
     {"name": "RectSprite", "value": 3623},
     {"name": "TextSprite", "value": 10066}
-   ]
-  },
-  {
-   "name": "flex",
-   "collapsed": true,
-   "children": [
-    {"name": "FlareVis", "value": 4116}
-   ]
-  },
-  {
-   "name": "physics",
-   "collapsed": true,
-   "children": [
-    {"name": "DragForce", "value": 1082},
-    {"name": "GravityForce", "value": 1336},
-    {"name": "IForce", "value": 319},
-    {"name": "NBodyForce", "value": 10498},
-    {"name": "Particle", "value": 2822},
-    {"name": "Simulation", "value": 9983},
-    {"name": "Spring", "value": 2213},
-    {"name": "SpringForce", "value": 1681}
    ]
   }
  ]

@@ -54,9 +54,9 @@ export class Section3Component implements OnInit {
   }
 
   ngOnInit() {
-    this.projectService.getSection3Graph1();
-    this.projectService.getSection3Graph2();
-    this.projectService.getSection3Graph3();
+    // this.projectService.getSection3Graph1();
+    // this.projectService.getSection3Graph2();
+    // this.projectService.getSection3Graph3();
   }
 
   getGraph1() {

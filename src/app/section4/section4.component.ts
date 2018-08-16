@@ -48,8 +48,8 @@ export class Section4Component implements OnInit {
   }
 
   ngOnInit() {
-    this.projectService.getSection4Graph1();
-    this.projectService.getSection4Graph2();
+    // this.projectService.getSection4Graph1();
+    // this.projectService.getSection4Graph2();
   }
 
   getGraph1() {

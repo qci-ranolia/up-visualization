@@ -72,9 +72,9 @@ export class Section6Component implements OnInit {
   }
 
   ngOnInit() {
-    this.projectService.getSection6Graph1();
-    this.projectService.getSection6Graph2();
-    this.projectService.getSection6Graph3();
+    // this.projectService.getSection6Graph1();
+    // this.projectService.getSection6Graph2();
+    // this.projectService.getSection6Graph3();
   }
 
   getGraph1() {

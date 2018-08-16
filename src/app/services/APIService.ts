@@ -22,6 +22,10 @@ export class APIService {
     return this.http.get(this.projectURL + 'tree.json').map(res => res.json());
   }
 
+  GetMasterData() {
+    return this.http.get(this.projectURL + 'masterData.json').map(res => res.json());
+  }
+
   GetGraph1() {
     return this.http.get(this.projectURL + 'graph1.json').map(res => res.json());
   }

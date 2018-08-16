@@ -46,8 +46,8 @@ export class Section5Component implements OnInit {
   }
 
   ngOnInit() {
-    this.projectService.getSection5Graph1();
-    this.projectService.getSection5Graph2();
+    // this.projectService.getSection5Graph1();
+    // this.projectService.getSection5Graph2();
   }
 
   getGraph1() {
