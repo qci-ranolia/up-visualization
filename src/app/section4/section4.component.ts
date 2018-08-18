@@ -27,6 +27,7 @@ export class Section4Component implements OnInit {
   graph4data2 : any = [];
   option1_data1: any;
   option1_legends: any;
+  colors:any
 
   constructor(private projectService: ProjectService) {
 
@@ -35,7 +36,10 @@ export class Section4Component implements OnInit {
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1();
-    });
+    })
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors = res
+    })
 
     this.projectService.emitSection4Graph2.subscribe(res=>{
       // console.log(res);
@@ -64,7 +68,7 @@ export class Section4Component implements OnInit {
       }
     };
     this.option1 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -88,8 +92,8 @@ export class Section4Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x:'center',
+            y:'bottom',
             // data:this.option1_legends
             data : this.graph1data1
           },
@@ -97,12 +101,12 @@ export class Section4Component implements OnInit {
           series : [
               {
                 title: {
-                    // text: 'Customized Pie',
-                    left: 'center',
-                    top: 10,
-                    textStyle: {
-                        color: 'white'
-                    }
+                  // text: 'Customized Pie',
+                  left: 'center',
+                  top: 10,
+                  textStyle: {
+                    color: 'white'
+                  }
                 },
                   name:this.graph1name,
                   type:'pie',
@@ -111,33 +115,33 @@ export class Section4Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph1data2,
                   // roseType: 'radius',
-                  label: {
+                  label:{
                     show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                      normal:{
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,
                   labelLine: {
                     show: false,
-                      normal: {show: false,
-                          lineStyle: {
-                            show: false,
-                              // color: 'rgba(255, 255, 255, 0.3)'
-                          },
-                          smooth: 0.2,
-                          length: 5,
-                          length2: 2
-                      }
+                    normal: {show: false,
+                      lineStyle: {
+                        show: false,
+                          // color: 'rgba(255, 255, 255, 0.3)'
+                      },
+                      smooth: 0.2,
+                      length: 5,
+                      length2: 2
+                    }
                   },
-
                   animationType: 'scale',
                   animationEasing: 'elasticOut',
                   animationDelay: function (idx) {
-                      return Math.random() * 200;
+                    return Math.random() * 200;
                   }
               }
           ]
@@ -147,7 +151,7 @@ export class Section4Component implements OnInit {
   getGraph2() {
 
     this.option2 = {
-      color:['orangered'],
+      color:[this.colors[1]],
       title: {
         text: this.graph2name,
         // subtext: 'test2',

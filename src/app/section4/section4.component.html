@@ -1,27 +1,25 @@
 <div class="container-fluid">
-
   <div class="row justify-content-center">
-
-    <div class="col-4 s4s1">
-      <div echarts [options]="option1" ></div>
+    <div class="col-4 s4s1 p-2">
+      <div class="col-sm-12 bg-white pt-3 pb-3">
+        <div class="donut-chart" echarts [options]="option1" ></div>
+      </div>
     </div>
-    <div class="col-8 p-0" >
+    <div class="col-8 p-0">
       <app-section5></app-section5>
     </div>
-
     <!-- <div class="col-4 s4s2">
       Under Const.
     </div>
     <div class="col-4 s4s3">
       Quality of const. toilets
     </div> -->
-
-
   </div>
-
-  <div class="row" >
-    <div class="col-10 s4s1" style="height: 150px; border : 1px solid gray" >
-      <div echarts [options]="option2" ></div>
+  <div class="row justify-content-center">
+    <div class="col-7 s4s1 p-2">
+      <div class="col-sm-12 bg-white pt-3 pb-3">
+        <div class="bar-chart" echarts [options]="option2" ></div>
+      </div>
     </div>
   </div>
 

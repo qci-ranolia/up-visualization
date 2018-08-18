@@ -8,25 +8,26 @@ import { ProjectService } from '../services/ProjectService';
 })
 export class Section5Component implements OnInit {
 
-    option1: any;
-    option2: any;
-    option3: any;
-    dataSet1: any = [];
-    dataSet2: any = [];
-    graph1name: any;
-    graph1data1 : any = [];
-    graph1data2 : any = [];
-    graph2name: any;
-    graph2data1 : any = [];
-    graph2data2 : any = [];
+    option1: any
+    option2: any
+    option3: any
+    dataSet1: any = []
+    dataSet2: any = []
+    graph1name: any
+    graph1data1 : any = []
+    graph1data2 : any = []
+    graph2name: any
+    graph2data1 : any = []
+    graph2data2 : any = []
     graph3name: any;
-    graph3data1 : any = [];
-    graph3data2 : any = [];
+    graph3data1 : any = []
+    graph3data2 : any = []
     graph4name: any;
-    graph4data1 : any = [];
-    graph4data2 : any = [];
-    option1_data1: any;
-    option1_legends: any;
+    graph4data1 : any = []
+    graph4data2 : any = []
+    option1_data1: any
+    option1_legends: any
+    colors:any
 
   constructor(private projectService: ProjectService) {
 
@@ -43,17 +44,19 @@ export class Section5Component implements OnInit {
       this.graph2name = res.name;
       this.getGraph2();
     });
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors=res
+    })
   }
 
   ngOnInit() {
-    // this.projectService.getSection5Graph1();
-    // this.projectService.getSection5Graph2();
+    this.projectService.getColors()
   }
 
   getGraph1() {
 
     this.option1 = {
-      color:['orangered'],
+      color:[this.colors[2]],
       title: {
         text: this.graph1name,
         // subtext: 'test2',
@@ -72,7 +75,8 @@ export class Section5Component implements OnInit {
       series: [{
           name:this.graph1name,
           data: this.graph1data2,
-          type: 'bar'
+          type: 'bar',
+          barWidth: '50%',
       }]
     };
   }
@@ -80,7 +84,7 @@ export class Section5Component implements OnInit {
   getGraph2() {
 
     this.option2 = {
-      color:['yellow'],
+      color:[this.colors[1]],
       title: {
         text: this.graph2name,
         // subtext: 'test2',
@@ -99,7 +103,8 @@ export class Section5Component implements OnInit {
       series: [{
           name:this.graph2name,
           data: this.graph2data2,
-          type: 'bar'
+          type: 'bar',
+          barWidth: '50%',
       }]
     };
   }

@@ -38,7 +38,7 @@ export class Section6Component implements OnInit {
   graph4data2 : any = [];
   option1_data1: any;
   option1_legends: any;
-
+  colors:any
   constructor(private projectService: ProjectService) {
 
 
@@ -68,13 +68,14 @@ export class Section6Component implements OnInit {
       this.graph3name = res.name;
       this.getGraph3();
     });
+    this.projectService.emitColors.subscribe(res=>{
+      this.colors=res
+    })
 
   }
 
   ngOnInit() {
-    // this.projectService.getSection6Graph1();
-    // this.projectService.getSection6Graph2();
-    // this.projectService.getSection6Graph3();
+    this.projectService.getColors()
   }
 
   getGraph1() {
@@ -89,7 +90,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option1 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       // color: this.color,
       title: {
         text: this.graph1name,
@@ -104,7 +105,6 @@ export class Section6Component implements OnInit {
               trigger: 'item',
               formatter: "{a} <br/>{b} : {c} ({d}%)"
           },
-
           visualMap: {
               show: false,
               min: -220,
@@ -114,8 +114,8 @@ export class Section6Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x:'center',
+            y:'bottom',
             // data:this.option1_legends
             data : this.graph1data1
           },
@@ -137,13 +137,14 @@ export class Section6Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph1data2,
                   // roseType: 'radius',
-                  label: {
+                  label:{
                     show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                      normal:{
+                        show: true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,
@@ -182,7 +183,7 @@ export class Section6Component implements OnInit {
       }
     };
     this.option3 = {
-      color:['lightskyblue','yellow','orangered'],
+      color:this.colors,
       // color: this.color,
       title: {
         text: this.graph3name,
@@ -207,8 +208,8 @@ export class Section6Component implements OnInit {
               }
           },
           legend: {
-            orient: 'vertical',
-            x: 'right',
+            x: 'center',
+            y: 'bottom',
             // data:this.option1_legends
             data : this.graph3data1
           },
@@ -230,13 +231,14 @@ export class Section6Component implements OnInit {
                   // data:this.option1_data1,
                   data : this.graph3data2,
                   // roseType: 'radius',
-                  label: {
-                    show: false,
-                      normal: {
-                        show: false,
-                          textStyle: {
-                              color: 'black'
-                          }
+                  label : {
+                    show:false,
+                      normal:{
+                        show:true,
+                        position:'inside',
+                        textStyle:{
+                          color: '#444'
+                        }
                       }
                   },
                   // color: this.color,

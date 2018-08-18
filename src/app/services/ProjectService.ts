@@ -6,9 +6,11 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ProjectService {
 
+
   emitId = new EventEmitter<any>();
   emitMap = new EventEmitter<any>();
   emitTree = new EventEmitter<any>();
+  emitColors = new EventEmitter<any>()
   emitSection2Graph1 = new EventEmitter<any>();
   emitSection2Graph2 = new EventEmitter<any>();
   emitSection2Graph3 = new EventEmitter<any>();
@@ -26,6 +28,28 @@ export class ProjectService {
   id = 0;
 
   constructor(private APIService: APIService) {}
+
+    // emitMap = new EventEmitter<any>()
+    // emitTree = new EventEmitter<any>()
+    //
+    // emitSection2Graph1 = new EventEmitter<any>()
+    // emitSection2Graph2 = new EventEmitter<any>()
+    // emitSection2Graph3 = new EventEmitter<any>()
+    // emitSection3Graph1 = new EventEmitter<any>()
+    // emitSection3Graph2 = new EventEmitter<any>()
+    // emitSection3Graph3 = new EventEmitter<any>()
+    // emitSection4Graph1 = new EventEmitter<any>()
+    // emitSection4Graph2 = new EventEmitter<any>()
+    // emitSection5Graph1 = new EventEmitter<any>()
+    // emitSection5Graph2 = new EventEmitter<any>()
+    // emitSection6Graph1 = new EventEmitter<any>()
+    // emitSection6Graph2 = new EventEmitter<any>()
+    // emitSection6Graph3 = new EventEmitter<any>()
+
+
+    getColors(){
+      this.emitColors.emit(['lightskyblue','yellow','#169487'])
+    }
 
   getMasterData() {
     this.APIService.GetMasterData().subscribe(res => {
@@ -67,7 +91,10 @@ export class ProjectService {
     this.emitSection6Graph1.emit(temp.Graph12);
     this.emitSection6Graph2.emit(temp.Graph13);
     this.emitSection6Graph3.emit(temp.Graph14);
+  }
 
+  getDatafromServer(id) {
+    
   }
 
   getMap() {
@@ -89,7 +116,7 @@ export class ProjectService {
       if (res) {
         this.emitTree.emit({ tree: res });
       } else {
-        alert('Error 20');
+        alert('Error 20')
       }
     }, err => {
       alert('Error 21');
