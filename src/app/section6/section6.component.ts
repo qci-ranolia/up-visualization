@@ -39,11 +39,15 @@ export class Section6Component implements OnInit {
   option1_data1: any;
   option1_legends: any;
   colors:any
-  constructor(private projectService: ProjectService) {
+  show: any;
 
+  constructor(private projectService: ProjectService) {
+    this.projectService.emitDontShowSection6.subscribe(res=>{
+      this.show = false;
+    })
 
     this.projectService.emitSection6Graph1.subscribe(res => {
-
+      this.show = true;
       this.graph1data1 = res.legends;
       this.graph1data2 = res.data;
       this.graph1name = res.name;
@@ -68,8 +72,9 @@ export class Section6Component implements OnInit {
       this.graph3name = res.name;
       this.getGraph3();
     });
+
     this.projectService.emitColors.subscribe(res=>{
-      this.colors=res
+      this.colors=res;
     })
 
   }

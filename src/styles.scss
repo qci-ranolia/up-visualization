@@ -15,7 +15,7 @@ body{
   background:#f8f8f8;
 }
 .sticky-top{
-  box-shadow:$boxShadow  
+  box-shadow:$boxShadow
 }
 .bg-white{
   box-shadow:$boxShadow;
@@ -23,10 +23,15 @@ body{
   border-radius:5px;
   background:#f8f9fa;
 }
-.section1, .section2, .section3, .section4 {
+.section1, .section2, .section3, .section4, {
   height:$sectionHeight2;
   border:$themeBorder;
   margin-bottom:10px;
+}
+.section7{
+  margin-top:30px;
+  height:$sectionHeight2;
+  border:$themeBorder;
 }
 .section1 {
   margin-top:25px;
@@ -88,5 +93,5 @@ body{
 .border.br-rnd{
   height:50px;
   line-height:50px;
-  box-shadow:$bx-shdw 
+  box-shadow:$bx-shdw
 }

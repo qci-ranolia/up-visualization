@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from '../services/ProjectService';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   options: any;
+  section6: any;
+  section7: any;
 
-  constructor() { }
+  constructor(private projectService: ProjectService) {
+
+    // this.projectService.emitDontShowSection6.subscribe(res=>{
+    //   this.section6 = res.show;
+    // });
+    //
+    // this.projectService.emitDontShowSection7.subscribe(res=>{
+    //   this.section7 = res.show;
+    // });
+
+  }
 
   ngOnInit() {
     const xAxisData = [];

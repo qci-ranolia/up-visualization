@@ -40,7 +40,7 @@ export class Section1Component implements OnInit {
     ngOnInit() {
       this.projectService.getMasterData();
       this.projectService.getMap();
-      this.projectService.getTree();
+
       this.projectService.getColors();
     }
 
@@ -249,7 +249,9 @@ export class Section1Component implements OnInit {
     }
 
     onTreeEvent(event: any, type: string) {
-    console.log('chart event:', type, event);
+
+      this.projectService.getDatafromMaster(event.data.id);
+
   }
 
 }

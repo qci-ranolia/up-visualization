@@ -24,28 +24,13 @@ export class ProjectService {
   emitSection6Graph1 = new EventEmitter<any>();
   emitSection6Graph2 = new EventEmitter<any>();
   emitSection6Graph3 = new EventEmitter<any>();
+  emitSection7Graph1 = new EventEmitter<any>();
+  emitDontShowSection6 = new EventEmitter<any>();
+  emitDontShowSection7 = new EventEmitter<any>();
   masterData : any = [];
   id = 0;
 
   constructor(private APIService: APIService) {}
-
-    // emitMap = new EventEmitter<any>()
-    // emitTree = new EventEmitter<any>()
-    //
-    // emitSection2Graph1 = new EventEmitter<any>()
-    // emitSection2Graph2 = new EventEmitter<any>()
-    // emitSection2Graph3 = new EventEmitter<any>()
-    // emitSection3Graph1 = new EventEmitter<any>()
-    // emitSection3Graph2 = new EventEmitter<any>()
-    // emitSection3Graph3 = new EventEmitter<any>()
-    // emitSection4Graph1 = new EventEmitter<any>()
-    // emitSection4Graph2 = new EventEmitter<any>()
-    // emitSection5Graph1 = new EventEmitter<any>()
-    // emitSection5Graph2 = new EventEmitter<any>()
-    // emitSection6Graph1 = new EventEmitter<any>()
-    // emitSection6Graph2 = new EventEmitter<any>()
-    // emitSection6Graph3 = new EventEmitter<any>()
-
 
     getColors(){
       this.emitColors.emit(['lightskyblue','yellow','#169487'])
@@ -57,6 +42,7 @@ export class ProjectService {
       if (res) {
         this.masterData = res.data;
         this.getDatafromMaster(this.id);
+        this.getTree(this.id);
       } else {
         alert('Error 0');
       }
@@ -69,6 +55,7 @@ export class ProjectService {
     this.id = id;
     console.log(id);
     if(id<=76) {
+      this.getTree(id);
       this.getDatafromMaster(id);
     } else {
       this.getDatafromServer(id);
@@ -88,13 +75,36 @@ export class ProjectService {
     this.emitSection4Graph2.emit(temp.Graph8);
     this.emitSection5Graph1.emit(temp.Graph10);
     this.emitSection5Graph2.emit(temp.Graph11);
-    this.emitSection6Graph1.emit(temp.Graph12);
-    this.emitSection6Graph2.emit(temp.Graph13);
-    this.emitSection6Graph3.emit(temp.Graph14);
+
+    if(temp.ODFVillages){
+      if(temp.ODFVillages==1) {                         // Show this section
+        this.emitDontShowSection6.emit({show:true});
+        this.emitSection6Graph1.emit(temp.Graph12);
+        this.emitSection6Graph2.emit(temp.Graph13);
+        this.emitSection6Graph3.emit(temp.Graph14);
+      } else {                                          // Dont Show the section
+        this.emitDontShowSection6.emit({show:false});
+      }
+    } else {
+      this.emitDontShowSection6.emit({show:false});
+    }
+
+    if(temp.Villages) {
+      if(temp.Villages==1) {                            // Show section
+        this.emitDontShowSection7.emit({show:true});
+        this.emitSection7Graph1.emit(temp.Graph15);
+      } else{
+        this.emitDontShowSection7.emit({show:false});
+      }
+    } else {
+      this.emitDontShowSection7.emit({show:false});
+    }
+
+
   }
 
   getDatafromServer(id) {
-    
+
   }
 
   getMap() {
@@ -110,11 +120,27 @@ export class ProjectService {
     });
   }
 
-  getTree() {
+  getTree(id) {
     this.APIService.GetTree().subscribe(res => {
 
+      let temp: any;
+      let pos = 0;
+
       if (res) {
-        this.emitTree.emit({ tree: res });
+
+        temp = res.data;
+
+        for(let i = 0; i<temp.length; i++) {
+
+          if(temp[i].id==id) {
+            console.log(id);
+            pos = id;
+            break;
+          }
+
+        }
+
+        this.emitTree.emit({ tree: temp[pos].treeData });
       } else {
         alert('Error 20')
       }
