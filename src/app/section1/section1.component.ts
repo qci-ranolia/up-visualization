@@ -8,8 +8,8 @@ declare var $: any
   templateUrl: './section1.component.html',
   styleUrls: ['./section1.component.scss']
 })
-export class Section1Component implements OnInit {
 
+export class Section1Component implements OnInit {
   map : any = [];
   mapLoaded = false;
   option1: any;
@@ -18,6 +18,8 @@ export class Section1Component implements OnInit {
   mapData: any;
   colors:any;
   cName: any;
+  mapColor : any;
+
 
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
@@ -40,6 +42,9 @@ export class Section1Component implements OnInit {
     this.projectService.emitColors.subscribe(res=>{
       this.colors = res
     });
+    this.projectService.emitMapColor.subscribe(res=>{
+      this.mapColor = res
+    })
   }
     ngOnInit() {
       this.projectService.getMasterData();
@@ -98,7 +103,7 @@ export class Section1Component implements OnInit {
                 realtime:false,
                 calculable:true,
                 inRange:{
-                  color:this.colors
+                  color:this.mapColor
                 }
               },
               series: [
@@ -247,13 +252,13 @@ export class Section1Component implements OnInit {
     }
 
     onMapEvent(event: any, type: string) {
-
       this.projectService.getIdFromMap(event.data.id);
-
     }
 
     onTreeEvent(event: any, type: string) {
 
+      this.cName = event.data.name;
+      console.log(this.cName);
       this.projectService.getDatafromMaster(event.data.id);
 
   }

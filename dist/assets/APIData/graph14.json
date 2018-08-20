@@ -1,0 +1,11 @@
+{
+  "heading": "No. of Aanganwadi covered",
+  "count": 11,
+  "name": "Access to Toilets",
+  "legends": ["Yes","No","Under construction"],
+  "data": [
+    { "name": "Yes", "value":123},
+    { "name": "No", "value":123},
+    { "name": "Under construction", "value":123}
+  ]
+}

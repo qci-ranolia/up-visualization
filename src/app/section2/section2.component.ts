@@ -64,6 +64,11 @@ export class Section2Component implements OnInit {
     color:this.colors,
     title:{
       text: this.graph1name,
+      x:'center',
+      textStyle: {
+        fontWeight: 'bold',
+        fontSize:16
+      }
       // subtext: 'test2',
     },
     itemStyle:{
@@ -153,6 +158,11 @@ export class Section2Component implements OnInit {
         },
         title:{
           text: this.graph2name,
+          x:'center',
+          textStyle: {
+            fontWeight: 'bold',
+            fontSize:16
+          }
           // subtext: 'test2',
         },
         series: [
@@ -161,12 +171,20 @@ export class Section2Component implements OnInit {
                 type: 'gauge',
                 detail: {formatter:'{value}%'},
                 data: [{value: this.graph2data2, name: this.graph2data1}],
+                axisLine: {
+                  lineStyle: {
+                    color: [[0.19, '#BF3836'],[0.82, '#63859B'],[1, '#91C5AE']],//#BF3836,#63859B,#91C5AE
+                    width: 22,
+                    shadowColor : '#ccc',
+                    shadowBlur: 10
+                  }
+                }
             }
         ]
     };
   }
 
-   getGraph3() {
+  getGraph3() {
   let itemStyle = {
     normal:{
       opacity:0.7,
@@ -178,9 +196,14 @@ export class Section2Component implements OnInit {
     }
   }
   this.option3 = {
-    color:[this.colors[1],this.colors[2]],
+    color:[this.colors[2],this.colors[1]],
     title:{
-      text: this.graph3name,
+      text:this.graph3name,
+      x:'center',
+      textStyle: {
+        fontWeight: 'bold',
+        fontSize:16
+      }
       // subtext: 'test2',
     },
     itemStyle:{

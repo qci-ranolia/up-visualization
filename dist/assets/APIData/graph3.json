@@ -1,0 +1,8 @@
+{
+  "name": "Usage",
+  "legends": ["Yes","No"],
+  "data": [
+    { "name": "Yes", "value":123},
+    { "name": "No", "value":123}
+  ]
+}

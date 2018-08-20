@@ -59,6 +59,11 @@ export class Section5Component implements OnInit {
       color:[this.colors[2]],
       title: {
         text: this.graph1name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       xAxis: {
@@ -77,6 +82,12 @@ export class Section5Component implements OnInit {
           data: this.graph1data2,
           type: 'bar',
           barWidth: '50%',
+          label: {
+            normal: {
+              show: true,
+              position: 'top'
+            }
+          }
       }]
     };
   }
@@ -87,6 +98,11 @@ export class Section5Component implements OnInit {
       color:[this.colors[1]],
       title: {
         text: this.graph2name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       xAxis: {
@@ -105,6 +121,12 @@ export class Section5Component implements OnInit {
           data: this.graph2data2,
           type: 'bar',
           barWidth: '50%',
+          label: {
+            normal: {
+              show: true,
+              position: 'top'
+            }
+          }
       }]
     };
   }

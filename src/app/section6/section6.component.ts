@@ -99,6 +99,11 @@ export class Section6Component implements OnInit {
       // color: this.color,
       title: {
         text: this.graph1name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       itemStyle: {
@@ -192,6 +197,11 @@ export class Section6Component implements OnInit {
       // color: this.color,
       title: {
         text: this.graph3name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       itemStyle: {

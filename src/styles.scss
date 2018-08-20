@@ -14,14 +14,14 @@ body{
   margin:0;
   background:#f8f8f8;
 }
-.sticky-top{
+.navbar{
   box-shadow:$boxShadow
 }
 .bg-white{
   box-shadow:$boxShadow;
   height:$chartHeight;
   border-radius:5px;
-  background:#f8f9fa;
+  background:#fff !important;
 }
 .section1, .section2, .section3, .section4, {
   height:$sectionHeight2;
@@ -74,7 +74,7 @@ body{
   border:0px;
 }
 .s6s1, .s6s2, .s6s3 {
-  border:$themeBorder;
+  // border:$themeBorder;
   height:$sectionHeight2;
 }
 .map-chart {
