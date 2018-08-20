@@ -24,10 +24,13 @@ export class ProjectService {
   emitSection6Graph1 = new EventEmitter<any>();
   emitSection6Graph2 = new EventEmitter<any>();
   emitSection6Graph3 = new EventEmitter<any>();
+  emitMapColor = new EventEmitter<any>();
+  emitBarColors = new EventEmitter<any>();
+
   masterData : any = [];
   id = 0;
 
-  constructor(private APIService: APIService) {}
+  constructor(private APIService:APIService) {}
 
     // emitMap = new EventEmitter<any>()
     // emitTree = new EventEmitter<any>()
@@ -47,28 +50,32 @@ export class ProjectService {
     // emitSection6Graph3 = new EventEmitter<any>()
 
 
-    getColors(){
-      this.emitColors.emit(['lightskyblue','yellow','#169487'])
-    }
-
-  getMasterData() {
-    this.APIService.GetMasterData().subscribe(res => {
-      console.log(res);
+  getColors(){
+    // guage colors 
+    // '#BF3836','#63859B','#91C5AE'
+    this.emitColors.emit(['lightskyblue','yellow','#169487']);
+    // this.emitColors.emit(['#BF3836','#63859B','#91C5AE']);
+    this.emitMapColor.emit(['rgba(22,148,135,0)','rgba(22,148,135,0.9)']);
+    this.emitBarColors.emit(['#169487','yellow']);
+  }
+  getMasterData(){
+    this.APIService.GetMasterData().subscribe(res =>{
+      // console.log(res);
       if (res) {
         this.masterData = res.data;
         this.getDatafromMaster(this.id);
       } else {
-        alert('Error 0');
+        alert('Error 0')
       }
     }, err => {
-      alert('Error 1');
+      alert('Error 1')
     });
   }
 
-  getIdFromMap(id) {
+  getIdFromMap(id){
     this.id = id;
-    console.log(id);
-    if(id<=76) {
+    // console.log(id);
+    if( id <= 76 ){
       this.getDatafromMaster(id);
     } else {
       this.getDatafromServer(id);

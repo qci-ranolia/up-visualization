@@ -8,29 +8,29 @@ import { ProjectService } from '../services/ProjectService';
 })
 export class Section4Component implements OnInit {
 
-  option1: any;
-  option2: any;
-  option3: any;
-  dataSet1: any = [];
-  dataSet2: any = [];
-  graph1name: any;
+  option1 : any;
+  option2 : any;
+  option3 : any;
+  dataSet1 : any = [];
+  dataSet2 : any = [];
+  graph1name : any;
   graph1data1 : any = [];
   graph1data2 : any = [];
-  graph2name: any;
+  graph2name : any;
   graph2data1 : any = [];
   graph2data2 : any = [];
-  graph3name: any;
+  graph3name : any;
   graph3data1 : any = [];
   graph3data2 : any = [];
-  graph4name: any;
+  graph4name : any;
   graph4data1 : any = [];
   graph4data2 : any = [];
-  option1_data1: any;
-  option1_legends: any;
-  colors:any
-
+  option1_data1 : any;
+  option1_legends : any;
+  colors : any
+  barColors : any
+  
   constructor(private projectService: ProjectService) {
-
     this.projectService.emitSection4Graph1.subscribe(res=>{
       this.graph1data1 = res.legends;
       this.graph1data2 = res.data;
@@ -40,7 +40,9 @@ export class Section4Component implements OnInit {
     this.projectService.emitColors.subscribe(res=>{
       this.colors = res
     })
-
+    this.projectService.emitBarColors.subscribe(res=>{
+      this.barColors = res
+    })
     this.projectService.emitSection4Graph2.subscribe(res=>{
       // console.log(res);
       this.graph2data1 = res.legends;
@@ -48,10 +50,9 @@ export class Section4Component implements OnInit {
       this.graph2name = res.name;
       this.getGraph2();
     });
-
   }
-
   ngOnInit() {
+    this.projectService.getColors()
     // this.projectService.getSection4Graph1();
     // this.projectService.getSection4Graph2();
   }
@@ -71,26 +72,29 @@ export class Section4Component implements OnInit {
       color:this.colors,
       title: {
         text: this.graph1name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       itemStyle: {
         borderWidth: 10,
         borderColor: '#FFF'
       },
-
-          tooltip : {
-              trigger: 'item',
-              formatter: "{a} <br/>{b} : {c} ({d}%)"
-          },
-
-          visualMap: {
-              show: false,
-              min: -220,
-              max: 3000,
-              inRange: {
-                  // colorLightness: [0, 1]
-              }
-          },
+        tooltip : {
+          trigger: 'item',
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        visualMap: {
+          show: false,
+          min: -220,
+          max: 3000,
+          inRange: {
+              // colorLightness: [0, 1]
+          }
+        },
           legend: {
             x:'center',
             y:'bottom',
@@ -149,11 +153,15 @@ export class Section4Component implements OnInit {
   }
 
   getGraph2() {
-
     this.option2 = {
-      color:[this.colors[1]],
+      color:[this.colors[2]],
       title: {
         text: this.graph2name,
+        x:'center',
+        textStyle: {
+          fontWeight: 'bold',
+          fontSize:16
+        }
         // subtext: 'test2',
       },
       xAxis: {
@@ -168,9 +176,16 @@ export class Section4Component implements OnInit {
           formatter: "{a} <br/>{b} : {c} "
       },
       series: [{
-          name:this.graph2name,
+          name: this.graph2name,
           data: this.graph2data2,
-          type: 'bar'
+          type: 'bar',
+          barWidth: '30%',
+          label: {
+            normal: {
+              show: true,
+              position: 'top'
+            }
+          }
       }]
     };
   }
