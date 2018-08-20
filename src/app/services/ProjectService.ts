@@ -49,7 +49,17 @@ export class ProjectService {
 
   }
 
-  login(formData) {
+  login(email1, pwd1) {
+    let email = email1;
+    let pwd   = pwd1;
+
+    console.log(email);
+    console.log(pwd);
+
+    if(email==="test@qcin.org" && pwd === "123") {
+      localStorage.setItem('token','true');
+      this.router.navigate(['./']);
+    }
 
   }
 

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     let formData = new FormData();
     formData.append('email',this.email);
     formData.append('pwd',this.password);
-    this.projectService.login(formData);
+    this.projectService.login(this.email, this.password);
 
   }
 
