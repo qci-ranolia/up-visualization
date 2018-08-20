@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable, } from '@angular/core';
 import { APIService } from './APIService';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
@@ -7,10 +8,14 @@ import { Observable } from 'rxjs/Observable';
 export class ProjectService {
 
 
+  id = 0;
+  masterData : any = [];
   emitId = new EventEmitter<any>();
   emitMap = new EventEmitter<any>();
   emitTree = new EventEmitter<any>();
   emitColors = new EventEmitter<any>()
+  emitMapData = new EventEmitter<any>();
+  emitUserLogin  = new EventEmitter<any>();
   emitSection2Graph1 = new EventEmitter<any>();
   emitSection2Graph2 = new EventEmitter<any>();
   emitSection2Graph3 = new EventEmitter<any>();
@@ -27,14 +32,24 @@ export class ProjectService {
   emitSection7Graph1 = new EventEmitter<any>();
   emitDontShowSection6 = new EventEmitter<any>();
   emitDontShowSection7 = new EventEmitter<any>();
-  masterData : any = [];
-  id = 0;
 
-  constructor(private APIService: APIService) {}
+  constructor(private APIService: APIService, private router: Router) {}
 
-    getColors(){
-      this.emitColors.emit(['lightskyblue','yellow','#169487'])
-    }
+  getColors(){
+    this.emitColors.emit(['lightskyblue','yellow','#169487']);
+  }
+
+  logout(){
+    this.router.navigate(['./login']);
+  }
+
+  checkLogin() {
+
+  }
+
+  login(formData) {
+
+  }
 
   getMasterData() {
     this.APIService.GetMasterData().subscribe(res => {
@@ -108,16 +123,33 @@ export class ProjectService {
   }
 
   getMap() {
+    let temp1 : any;
+    let temp2 : any;
     this.APIService.GetMap().subscribe(res => {
       // console.log(res);
       if (res) {
-        this.emitMap.emit({ map: res });
+        temp1 = res;
+        this.APIService.GetMapData().subscribe(res2 => {
+          // console.log(res);
+          if (res2) {
+            temp2 = res2;
+            this.emitMap.emit({map:temp1, data:temp2});
+          } else {
+            alert('Error 101');
+          }
+        }, err => {
+          alert('Error 111');
+        });
       } else {
         alert('Error 10');
       }
     }, err => {
       alert('Error 11');
     });
+  }
+
+  getMapData() {
+
   }
 
   getTree(id) {

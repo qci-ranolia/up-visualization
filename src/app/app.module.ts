@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import 'rxjs/add/operator/map';
 
+import { routes } from './app.routes';
 import { NgxEchartsModule } from 'ngx-echarts';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -40,7 +40,8 @@ import { Section7Component } from './section7/section7.component';
     HttpModule,
     RouterModule,
     FormsModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [
     APIService,

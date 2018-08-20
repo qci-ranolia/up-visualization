@@ -16,21 +16,25 @@ export class Section1Component implements OnInit {
   option2: any;
   treeData: any;
   mapData: any;
-  colors:any
+  colors:any;
+  cName: any;
 
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
 
     this.projectService.emitMap.subscribe(res=>{
+      console.log(res);
       this.map = res.map.map;
-      this.mapData = res.map.data;
+      this.mapData = res.data.data;
       this.getMap();
+
     });
 
     this.projectService.emitTree.subscribe(res=>{
-      // console.log(res)
+      console.log(res);
       this.treeData = res.tree;
       this.getTree();
+      this.cName = res.tree.name;
     });
 
     this.projectService.emitColors.subscribe(res=>{

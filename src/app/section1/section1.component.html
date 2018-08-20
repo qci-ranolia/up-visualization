@@ -1,4 +1,5 @@
 <div class="container-fluid">
+
   <div class="row justify-content-center">
     <div class="col-7 s1s1 p-2">
       <div class="col-sm-12 bg-white">
@@ -7,6 +8,7 @@
     </div>
     <div class="col-5 s1s2 p-2">
       <div class="col-sm-12 bg-white">
+        {{cName}}
         <!-- <h4>Districts</h4> -->
         <div class="tree-chart" echarts [options]="option2" (chartClick)="onTreeEvent($event,'chartClick')"></div>
       </div>

@@ -18,6 +18,10 @@ export class APIService {
     return this.http.get(this.projectURL + 'map.json').map(res => res.json());
   }
 
+  GetMapData() {
+    return this.http.get(this.projectURL + 'mapData.json').map(res => res.json());
+  }
+
   GetTree() {
     return this.http.get(this.projectURL + 'tree.json').map(res => res.json());
   }
