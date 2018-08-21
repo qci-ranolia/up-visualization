@@ -13,6 +13,10 @@ body{
   padding:0;
   margin:0;
   background:#f8f8f8;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8X7c0R--PKhrzSz5yKL2wKTNJ93sjaDLm3hXSiPZ6PWyi0yAu");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .navbar{
   box-shadow:$boxShadow
@@ -21,7 +25,7 @@ body{
   box-shadow:$boxShadow;
   height:$chartHeight;
   border-radius:5px;
-  background:#fff !important;
+  background: #ffffffa1 !important;
 }
 .section1, .section2, .section3, .section4, {
   height:$sectionHeight2;

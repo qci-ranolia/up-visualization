@@ -175,7 +175,7 @@ export class Section2Component implements OnInit {
                 data: [{value: this.graph2data2, name: this.graph2data1}],
                 axisLine: {
                   lineStyle: {
-                    color: [[0.19, '#BF3836'],[0.82, '#63859B'],[1, '#91C5AE']],//#BF3836,#63859B,#91C5AE
+                    color: [[0.14, this.colors[1]],[0.81, this.colors[2]],[1, this.colors[0]]],//#BF3836,#63859B,#91C5AE
                     width: 22,
                     shadowColor : '#ccc',
                     shadowBlur: 10
