@@ -64,9 +64,9 @@ export class Section3Component implements OnInit {
   getGraph1() {
     this.option1 = {
       // color: ['#006699'],
-      color : [this.colors[0]],
+      color : [this.colors[0], this.colors[1]],
       title: {
-        text: this.graph1name,
+        text: this.graph1name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',
@@ -104,7 +104,7 @@ export class Section3Component implements OnInit {
     this.option2 = {
       color: [this.colors[1],this.colors[0]],
       title: {
-        text: this.graph2name,
+        text: this.graph2name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',
@@ -142,7 +142,7 @@ export class Section3Component implements OnInit {
     this.option3 = {
       color:[[this.colors[2]]],
       title:{
-        text:this.graph3name,
+        text:this.graph3name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',

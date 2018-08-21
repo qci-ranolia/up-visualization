@@ -98,8 +98,8 @@ export class Section1Component implements OnInit {
               visualMap: {
 
                 min:0,
-                max:7500,
-                text:['High','Low'],
+                max:100,
+                text:['Completed %','Started %'],
                 realtime:false,
                 calculable:true,
                 inRange:{

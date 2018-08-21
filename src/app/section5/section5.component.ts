@@ -58,7 +58,7 @@ export class Section5Component implements OnInit {
     this.option1 = {
       color:[this.colors[2]],
       title: {
-        text: this.graph1name,
+        text: this.graph1name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',
@@ -97,7 +97,7 @@ export class Section5Component implements OnInit {
     this.option2 = {
       color:[this.colors[1]],
       title: {
-        text: this.graph2name,
+        text: this.graph2name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',

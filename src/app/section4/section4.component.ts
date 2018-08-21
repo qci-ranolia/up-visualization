@@ -29,7 +29,7 @@ export class Section4Component implements OnInit {
   option1_legends : any;
   colors : any
   barColors : any
-  
+
   constructor(private projectService: ProjectService) {
     this.projectService.emitSection4Graph1.subscribe(res=>{
       this.graph1data1 = res.legends;
@@ -156,7 +156,7 @@ export class Section4Component implements OnInit {
     this.option2 = {
       color:[this.colors[2]],
       title: {
-        text: this.graph2name,
+        text: this.graph2name+" (percentage)",
         x:'center',
         textStyle: {
           fontWeight: 'bold',
