@@ -66,9 +66,13 @@ export class ProjectService {
   getColors(){
     // guage colors
     // '#BF3836','#63859B','#91C5AE'
-    this.emitColors.emit(['lightskyblue','yellow','#169487']);
+    // this.emitColors.emit(['lightskyblue','#ffa52b','#169487']);
+    // yellow[1]
+    this.emitColors.emit(['#1ABAD0','#FEBD33','rgba(22,148,135,0.82)']);
     // this.emitColors.emit(['#BF3836','#63859B','#91C5AE']);
-    this.emitMapColor.emit(['rgba(22,148,135,0)','rgba(22,148,135,0.9)']);
+    this.emitMapColor.emit(['rgba(205,245,240,0.5)','rgba(22,148,135,1)']);
+    // this.emitMapColor.emit(['#F3F3F1','#C2EAB6']);
+    // this.emitMapColor.emit(['#FEBD34','#F1443C']);
     this.emitBarColors.emit(['#169487','yellow']);
   }
 

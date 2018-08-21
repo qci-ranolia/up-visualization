@@ -114,7 +114,11 @@ export class Section1Component implements OnInit {
                   zoom: 1.2,
                   roam: true,
                   itemStyle: {
-                    normal: { label: { show: false } },
+                    normal: {
+                      label: {
+                        show: false
+                      }
+                    },
                     emphasis: {
                       areaColor:'#fff',
                       shadowOffsetX: 0,

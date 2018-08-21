@@ -62,6 +62,11 @@ export class Section3Component implements OnInit {
   }
 
   getGraph1() {
+    var yMax = 100;
+    var dataShadow = [];
+    for (var i = 0; i < this.graph1data2.length; i++) {
+      dataShadow.push(yMax);
+    }
     this.option1 = {
       // color: ['#006699'],
       color : [this.colors[0], this.colors[1]],
@@ -79,7 +84,8 @@ export class Section3Component implements OnInit {
         data: this.graph1data1
       },
       yAxis: {
-        type: 'value'
+        type: 'value',
+        splitLine:{ show:false }
       },
       tooltip : {
         trigger: 'item',
@@ -101,6 +107,11 @@ export class Section3Component implements OnInit {
   }
 
   getGraph2() {
+    var yMax = 100;
+    var dataShadow = [];
+    for (var i = 0; i < this.graph2data2.length; i++) {
+      dataShadow.push(yMax);
+    }
     this.option2 = {
       color: [this.colors[1],this.colors[0]],
       title: {
@@ -117,7 +128,8 @@ export class Section3Component implements OnInit {
         data: this.graph2data1
       },
       yAxis: {
-        type: 'value'
+        type: 'value',
+        splitLine: {show: false}
       },
       tooltip : {
         trigger: 'item',
@@ -139,6 +151,11 @@ export class Section3Component implements OnInit {
   }
 
   getGraph3() {
+    var yMax = 100;
+    var dataShadow = [];
+    for (var i = 0; i < this.graph3data2.length; i++) {
+      dataShadow.push(yMax);
+    }
     this.option3 = {
       color:[[this.colors[2]]],
       title:{
@@ -154,7 +171,8 @@ export class Section3Component implements OnInit {
         data:this.graph3data1
       },
       yAxis:{
-        type:'value'
+        type:'value',
+        splitLine: {show: false}
       },
       tooltip:{
         trigger:'item',

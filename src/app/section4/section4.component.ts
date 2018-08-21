@@ -153,6 +153,11 @@ export class Section4Component implements OnInit {
   }
 
   getGraph2() {
+    var yMax = 100;
+    var dataShadow = [];
+    for (var i = 0; i < this.graph1data2.length; i++) {
+      dataShadow.push(yMax);
+    }
     this.option2 = {
       color:[this.colors[2]],
       title: {
@@ -169,7 +174,8 @@ export class Section4Component implements OnInit {
           data: this.graph2data1
       },
       yAxis: {
-          type: 'value'
+          type: 'value',
+          splitLine:{ show:false }
       },
       tooltip : {
           trigger: 'item',
