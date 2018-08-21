@@ -35,14 +35,14 @@ export class Section2Component implements OnInit {
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1()
-    });
+    })
 
     this.projectService.emitSection2Graph2.subscribe(res=>{
       this.graph2data1 = res.legends;
       this.graph2data2 = res.data;
       this.graph2name = res.name;
       this.getGraph2()
-    });
+    })
 
     this.projectService.emitSection2Graph3.subscribe(res=>{
       this.graph3data1 = res.legends;
@@ -50,9 +50,11 @@ export class Section2Component implements OnInit {
       this.graph3name = res.name;
       this.getGraph3()
     })
+
     this.projectService.emitColors.subscribe(res=>{
       this.colors = res
     })
+
   }
   ngOnInit() {
     this.projectService.getColors();
@@ -73,9 +75,9 @@ export class Section2Component implements OnInit {
     },
     itemStyle:{
       borderWidth: 10,
-      borderColor: '#FFF'
+      borderColor: 'transparent'
     },
-    tooltip :{
+    tooltip : {
       trigger: 'item',
       formatter: "{a} <br/>{b} :{c} ({d}%)"
     },
@@ -91,7 +93,7 @@ export class Section2Component implements OnInit {
       x:'center',
       y:'bottom',
       // data:this.option1_legends
-      data : this.graph1data1
+      data:this.graph1data1
     },
         series : [
             {
@@ -100,7 +102,7 @@ export class Section2Component implements OnInit {
                   left: 'center',
                   top: 10,
                   textStyle:{
-                    color: 'white'
+                    color:'white'
                   }
               },
                 name:this.graph1name,
@@ -112,8 +114,8 @@ export class Section2Component implements OnInit {
                 // roseType: 'radius',
                 label:{
                     normal:{
-                      formatter: '{b} :\n {d}%',
-                      backgroundColor: '#eee',
+                      formatter: '{d}%',
+                      // backgroundColor: '#eee',
                       borderColor: '#aaa',
                       show: true,
                       position:'inside',
@@ -176,7 +178,7 @@ export class Section2Component implements OnInit {
                 axisLine: {
                   lineStyle: {
                     color: [[0.14, this.colors[1]],[0.81, this.colors[2]],[1, this.colors[0]]],//#BF3836,#63859B,#91C5AE
-                    width: 22,
+                    width: 26,
                     shadowColor : '#ccc',
                     shadowBlur: 10
                   }
@@ -210,7 +212,7 @@ export class Section2Component implements OnInit {
     },
     itemStyle:{
       borderWidth: 10,
-      borderColor: '#FFF'
+      borderColor: 'transparent'
     },
       tooltip :{
           trigger: 'item',
@@ -252,8 +254,8 @@ export class Section2Component implements OnInit {
                 label:{
                   show: false,
                     normal:{
-                      formatter: '{b} : {d}%',
-                      backgroundColor: '#eee',
+                      formatter: '{d}%',
+                      //backgroundColor: '#eee',
                       borderColor: '#aaa',
                       show: true,
                       position:'inside',

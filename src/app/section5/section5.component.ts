@@ -93,8 +93,7 @@ export class Section5Component implements OnInit {
               show: true,
               position: 'top',
               formatter: '{c}%',
-              backgroundColor: '#eee',
-              borderColor: '#aaa',
+              // backgroundColor: '#eee',
               color:'#363636'
             }
           }
@@ -142,8 +141,7 @@ export class Section5Component implements OnInit {
               show: true,
               position: 'top',
               formatter: '{c}%',
-              backgroundColor: '#eee',
-              borderColor: '#aaa',
+              // backgroundColor: '#eee',
               color:'#363636'
             }
           }
