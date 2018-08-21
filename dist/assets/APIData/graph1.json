@@ -1,0 +1,9 @@
+{
+  "name": "Toilet Coverage",
+  "legends": ["Access to Toilet","No Toilet","Under Construction"],
+  "data": [
+    { "name": "Access to Toilet", "value":123},
+    { "name": "No Toilet", "value":123},
+    { "name": "Under Construction", "value":123}
+  ]
+}
