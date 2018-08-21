@@ -29,7 +29,6 @@ export class Section1Component implements OnInit {
       this.map = res.map.map;
       this.mapData = res.data.data;
       this.getMap();
-
     });
 
     this.projectService.emitTree.subscribe(res=>{
@@ -49,7 +48,6 @@ export class Section1Component implements OnInit {
     ngOnInit() {
       this.projectService.getMasterData();
       this.projectService.getMap();
-
       this.projectService.getColors();
     }
 
@@ -65,8 +63,8 @@ export class Section1Component implements OnInit {
             // update options:
             this.option1 = {
               title: {
-                // text: 'Map of UP',
-                subtext: 'Map of UP',
+                text: 'Map of UP',
+                // subtext: 'Map of UP',
                 sublink: ''
               },
               tooltip: {
@@ -99,7 +97,7 @@ export class Section1Component implements OnInit {
 
                 min:0,
                 max:100,
-                text:['Completed %','Started %'],
+                text:['Complete %','Start %'],
                 realtime:false,
                 calculable:true,
                 inRange:{

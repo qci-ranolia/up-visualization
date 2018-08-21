@@ -123,12 +123,13 @@ export class Section4Component implements OnInit {
                     show: false,
                       normal:{
                         show: true,
-                        formatter: '{b} :\n {d}%',
-                        backgroundColor: '#eee',
-                        borderColor: '#aaa',
+                        formatter: '{d}%',
+                        // backgroundColor: '#eee',
+                        // borderColor: '#aaa',
                         position:'inside',
                         textStyle:{
-                          color: '#444'
+                          color: 'black',
+                          // font:'blod'
                         }
                       }
                   },

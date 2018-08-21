@@ -68,7 +68,7 @@ export class ProjectService {
     // '#BF3836','#63859B','#91C5AE'
     // this.emitColors.emit(['lightskyblue','#ffa52b','#169487']);
     // yellow[1]
-    this.emitColors.emit(['#F2A359','#F2DC5D','#7C90DB']);
+    this.emitColors.emit(['#ef943e','#efd645','#7C90DB']);
     // this.emitColors.emit(['#BF3836','#63859B','#91C5AE']);
     this.emitMapColor.emit(['#FFFAFF','#7C90DB']);
     // this.emitMapColor.emit(['#F3F3F1','#C2EAB6']);

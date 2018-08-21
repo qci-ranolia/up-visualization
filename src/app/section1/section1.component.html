@@ -8,14 +8,12 @@
     </div>
     <div class="col-5 s1s2 p-2">
       <div class="col-sm-12 bg-white">
-        {{cName}}
-        <!-- <h4>Districts</h4> -->
+
+        <b>{{cName}}</b>
+
         <div class="tree-chart" echarts [options]="option2" (chartClick)="onTreeEvent($event,'chartClick')"></div>
       </div>
-      <!--<div class="row">
-        <div class="col-12 s1s2s1"></div>
-        <div class="col-12 s1s2s2"></div>
-      </div>-->
+
     </div>
   </div>
 </div>

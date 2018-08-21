@@ -112,13 +112,15 @@ export class Section2Component implements OnInit {
                 // roseType: 'radius',
                 label:{
                     normal:{
-                      formatter: '{b} :\n {d}%',
-                      backgroundColor: '#eee',
-                      borderColor: '#aaa',
+                      formatter: '{d}%',
+                      // backgroundColor: '#eee',
+                      // borderColor: '#aaa',
+                      // color:"black",
                       show: true,
                       position:'inside',
                       textStyle:{
-                        color: '#444'
+                        // color: '#444',
+                        color: 'black'
                       }
                     }
                 },
@@ -129,7 +131,7 @@ export class Section2Component implements OnInit {
                     show: false,
                     lineStyle:{
                       show: false,
-                        // color: 'rgba(255, 255, 255, 0.3)'
+                      // color: 'rgba(255, 255, 255, 0.3)'
                     },
                     smooth: 0.2,
                     length: 5,
@@ -252,13 +254,14 @@ export class Section2Component implements OnInit {
                 label:{
                   show: false,
                     normal:{
-                      formatter: '{b} : {d}%',
-                      backgroundColor: '#eee',
-                      borderColor: '#aaa',
+                      formatter: '{d}%',
+                      // backgroundColor: '#eee',
+                      // borderColor: '#aaa',
                       show: true,
                       position:'inside',
                       textStyle:{
-                        color: '#444'
+                        // color: '#444',
+                        color: 'black'
                       }
                     }
                 },
