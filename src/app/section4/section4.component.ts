@@ -196,9 +196,9 @@ export class Section4Component implements OnInit {
               show: true,
               position: 'top',
               formatter: '{c}%',
-              backgroundColor: '#eee',
-              borderColor: '#aaa',
-              color:'#363636'
+              // backgroundColor: '#eee',
+              // borderColor: '#aaa',
+              color:'black'
             }
           }
       }]

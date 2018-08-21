@@ -20,7 +20,6 @@ export class Section1Component implements OnInit {
   cName: any;
   mapColor : any;
 
-
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
 
