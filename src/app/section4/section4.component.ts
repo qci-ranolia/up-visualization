@@ -81,7 +81,7 @@ export class Section4Component implements OnInit {
       },
       itemStyle: {
         borderWidth: 10,
-        borderColor: '#FFF'
+        borderColor: 'transparent'
       },
         tooltip : {
           trigger: 'item',
@@ -124,8 +124,7 @@ export class Section4Component implements OnInit {
                       normal:{
                         show: true,
                         formatter: '{d}%',
-                        // backgroundColor: '#eee',
-                        // borderColor: '#aaa',
+                        color:'black',
                         position:'inside',
                         textStyle:{
                           color: 'black',
@@ -196,9 +195,8 @@ export class Section4Component implements OnInit {
               show: true,
               position: 'top',
               formatter: '{c}%',
-              // backgroundColor: '#eee',
-              // borderColor: '#aaa',
               color:'black'
+
             }
           }
       }]

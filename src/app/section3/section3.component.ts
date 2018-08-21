@@ -102,8 +102,6 @@ export class Section3Component implements OnInit {
             show: true,
             position: 'top',
             formatter: '{c}%',
-            // backgroundColor: '#eee',
-            // borderColor: '#aaa',
             color:'black'
           }
         }
@@ -151,8 +149,6 @@ export class Section3Component implements OnInit {
             show: true,
             position: 'top',
             formatter: '{c}%',
-            // backgroundColor: '#eee',
-            // borderColor: '#aaa',
             color:'black'
           }
         }
@@ -199,8 +195,6 @@ export class Section3Component implements OnInit {
             show: true,
             position: 'top',
             formatter: '{c}%',
-            // backgroundColor: '#eee',
-            // borderColor: '#aaa',
             color:'black'
           }
         }

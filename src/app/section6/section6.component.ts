@@ -108,7 +108,7 @@ export class Section6Component implements OnInit {
       },
       itemStyle: {
         borderWidth: 10,
-        borderColor: '#FFF'
+        borderColor: 'transparent'
       },
 
           tooltip : {
@@ -153,7 +153,6 @@ export class Section6Component implements OnInit {
                         show: true,
                         formatter: '{d}%',
                         // backgroundColor: '#eee',
-                        // borderColor: '#aaa',
                         position:'inside',
                         textStyle:{
                           // color: '#444',
@@ -210,7 +209,7 @@ export class Section6Component implements OnInit {
       },
       itemStyle: {
         borderWidth: 10,
-        borderColor: '#FFF'
+        borderColor: 'transparent'
       },
 
           tooltip : {
@@ -254,8 +253,6 @@ export class Section6Component implements OnInit {
                     show:false,
                       normal:{
                         formatter: '{d}%',
-                        // backgroundColor: '#eee',
-                        // borderColor: '#aaa',
                         show:true,
                         position:'inside',
                         textStyle:{
