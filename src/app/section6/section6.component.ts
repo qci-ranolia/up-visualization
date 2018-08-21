@@ -151,6 +151,9 @@ export class Section6Component implements OnInit {
                     show: false,
                       normal:{
                         show: true,
+                        formatter: '{b} : \n {d}%',
+                        backgroundColor: '#eee',
+                        borderColor: '#aaa',
                         position:'inside',
                         textStyle:{
                           color: '#444'
@@ -249,6 +252,9 @@ export class Section6Component implements OnInit {
                   label : {
                     show:false,
                       normal:{
+                        formatter: '{b} :\n {d}%',
+                        backgroundColor: '#eee',
+                        borderColor: '#aaa',
                         show:true,
                         position:'inside',
                         textStyle:{

@@ -58,7 +58,7 @@ export class Section5Component implements OnInit {
     this.option1 = {
       color:[this.colors[2]],
       title: {
-        text: this.graph1name+" (percentage)",
+        text: this.graph1name,
         x:'center',
         textStyle: {
           fontWeight: 'bold',
@@ -71,7 +71,8 @@ export class Section5Component implements OnInit {
           data: this.graph1data1
       },
       yAxis: {
-          type: 'value'
+          type: 'value',
+          max: 100
       },
       tooltip : {
           trigger: 'item',
@@ -85,7 +86,11 @@ export class Section5Component implements OnInit {
           label: {
             normal: {
               show: true,
-              position: 'top'
+              position: 'top',
+              formatter: '{c}%',
+              backgroundColor: '#eee',
+              borderColor: '#aaa',
+              color:'#363636'
             }
           }
       }]
@@ -97,7 +102,7 @@ export class Section5Component implements OnInit {
     this.option2 = {
       color:[this.colors[1]],
       title: {
-        text: this.graph2name+" (percentage)",
+        text: this.graph2name,
         x:'center',
         textStyle: {
           fontWeight: 'bold',
@@ -110,7 +115,8 @@ export class Section5Component implements OnInit {
           data: this.graph2data1
       },
       yAxis: {
-          type: 'value'
+          type: 'value',
+          max: 100
       },
       tooltip : {
           trigger: 'item',
@@ -124,7 +130,11 @@ export class Section5Component implements OnInit {
           label: {
             normal: {
               show: true,
-              position: 'top'
+              position: 'top',
+              formatter: '{c}%',
+              backgroundColor: '#eee',
+              borderColor: '#aaa',
+              color:'#363636'
             }
           }
       }]

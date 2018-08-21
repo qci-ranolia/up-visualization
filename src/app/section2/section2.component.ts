@@ -111,8 +111,10 @@ export class Section2Component implements OnInit {
                 data : this.graph1data2,
                 // roseType: 'radius',
                 label:{
-                  show: false,
                     normal:{
+                      formatter: '{b} :\n {d}%',
+                      backgroundColor: '#eee',
+                      borderColor: '#aaa',
                       show: true,
                       position:'inside',
                       textStyle:{
@@ -250,6 +252,9 @@ export class Section2Component implements OnInit {
                 label:{
                   show: false,
                     normal:{
+                      formatter: '{b} : {d}%',
+                      backgroundColor: '#eee',
+                      borderColor: '#aaa',
                       show: true,
                       position:'inside',
                       textStyle:{

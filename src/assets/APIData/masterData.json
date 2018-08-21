@@ -6,9 +6,9 @@
         "name": "Toilet Coverage",
         "legends": ["Access to Toilet","No Toilet","Under Construction"],
         "data": [
-          { "name": "Access to Toilet", "value":123},
-          { "name": "No Toilet", "value":123},
-          { "name": "Under Construction", "value":123}
+          { "name": "Access to Toilet", "value":23},
+          { "name": "No Toilet", "value":13},
+          { "name": "Under Construction", "value":23}
         ]
       },
       "Graph2": {
@@ -20,35 +20,35 @@
         "name": "Usage",
         "legends": ["Yes","No"],
         "data": [
-          { "name": "No", "value":123},
-          { "name": "Yes", "value":123}
+          { "name": "No", "value":31},
+          { "name": "Yes", "value":13}
         ]
       },
       "Graph4" : {
         "name": "Type of Disposal",
         "legends": ["Safe Disposal","Unsafe Disposal"],
         "data": [
-          { "name": "Safe Disposal", "value":123},
-          { "name": "Unsafe Disposal", "value":123}
+          { "name": "Safe Disposal", "value":43},
+          { "name": "Unsafe Disposal", "value":73}
         ]
       },
       "Graph5" : {
         "name": "Incidences of open defecation",
         "legends": ["Yes", "No"],
-        "data":[120, 90]
+        "data":[20, 90]
       },
       "Graph6" : {
         "name": "Availability of Water",
         "legends": ["Yes", "No"],
-        "data":[120, 190]
+        "data":[10, 50]
       },
       "Graph7" : {
         "name": "Overreporting",
         "legends": ["Toilets -yet to start","Sub-structure built","Almost ready"],
         "data": [
-          { "name": "Toilets -yet to start", "value":123},
-          { "name": "Sub-structure built", "value":123},
-          { "name": "Almost ready", "value":123}
+          { "name": "Toilets -yet to start", "value":13},
+          { "name": "Sub-structure built", "value":23},
+          { "name": "Almost ready", "value":12}
         ]
       },
       "Graph8" : {
@@ -75,9 +75,9 @@
         "name": "Toilet Coverage",
         "legends": ["Yes","No","Under construction"],
         "data": [
-          { "name": "Yes", "value":123},
-          { "name": "No", "value":123},
-          { "name": "Under construction", "value":123}
+          { "name": "Yes", "value":12},
+          { "name": "No", "value":13},
+          { "name": "Under construction", "value":23}
         ]
       },
       "Graph13" : {
@@ -94,9 +94,9 @@
         "name": "Access to Toilets",
         "legends": ["Yes","No","Under construction"],
         "data": [
-          { "name": "Yes", "value":123},
-          { "name": "No", "value":123},
-          { "name": "Under construction", "value":123}
+          { "name": "Yes", "value":13},
+          { "name": "No", "value":12},
+          { "name": "Under construction", "value":11}
         ]
       },
       "Graph15" : {
