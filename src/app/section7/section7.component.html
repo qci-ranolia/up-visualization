@@ -1,12 +1,10 @@
 <div *ngIf="show" class="section7">
-  <br>
+  <br />
   <h3>Village Data</h3>
-  <br><br>
-  <div class="row" style="overflow-x: auto; overflow-y : auto" >
-
-    <div class="col-12" >
-
-      <table class="table" >
+  <br /><br />
+  <div class="row m-0" style="overflow-x:auto;overflow-y:auto">
+    <div class="col-12">
+      <table class="table">
         <thead>
           <tr>
             <th *ngFor="let head of headers" scope="col">{{head}}</th>
@@ -14,11 +12,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let row of rowData">
-            <td *ngFor="let data of row" >{{data}}</td>
+            <td *ngFor="let data of row">{{data}}</td>
           </tr>
         </tbody>
       </table>
-
     </div>
   </div>
 </div>

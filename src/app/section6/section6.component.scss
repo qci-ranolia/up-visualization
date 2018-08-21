@@ -1,10 +1,9 @@
 .border.br-rnd .col-sm-2{
-    border-width: 0px 0px 0px 3px;
+    border-width: 0px 0px 0px 2px;
     border-style: solid;
-    -webkit-border-image:        -webkit-gradient(linear, 0 0, 100% 0, from(#dedede), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image:        -webkit-linear-gradient(left, #dedede, rgba(0, 0, 0, 0)) 1 100%;
-    -moz-border-image:       -moz-linear-gradient(left, #dedede, rgba(0, 0, 0, 0)) 1 100%;
-    -o-border-image:       -o-linear-gradient(left, #dedede, rgba(0, 0, 0, 0)) 1 100%;
-    border-image: linear-gradient(to left, #dedede, rgba(0, 0, 0, 0)) 1 100%;
-
+    -webkit-border-image: -webkit-gradient( linear, 0 0, 100% 0, from(#fff), to(rgba(0, 0, 0, 0.3 ))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient( left, #fff, rgba(0, 0, 0, 0.3 )) 1 100%;
+    -moz-border-image: -moz-linear-gradient( left, #fff, rgba(0, 0, 0, 0.3 )) 1 100%;
+    -o-border-image: -o-linear-gradient( left, #fff, rgba(0, 0, 0, 0.3 )) 1 100%;
+    border-image: linear-gradient( to left, #fff, rgba(0, 0, 0, 0.3 )) 1 100%;
 }
