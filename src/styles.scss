@@ -4,7 +4,7 @@ $sectionHeight2: 420px;
 $sectionHeight3: 420px;
 $boxShadow:0 2px 1px -2px rgba(0, 0, 0, 0.5), 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0px 5px 0 rgba(0, 0, 0, 0.22);
 $boxShadowShade:0px 6px 14px 0px rgba(0, 0, 0, 0.34), 0 1px 0px 0 rgba(0, 0, 0, 0.44), 0 0px 2px 0 rgba(0, 0, 0, 0.42);
-$themeBorder:1px solid #e0e0e0;
+$whiteBorder:1px solid #fff;
 $chartHeight:90%;
 $dHeight:100%;
 $br-rnd:100px;
@@ -12,12 +12,17 @@ $bx-shdw:1px 3px 2px -2px #ccc;
 $border-white:#fff;
 $dark:#000;
 $midDark:#777;
+$scrollRight:35px;
+$scrollBottom:35px;
+$transition:all .2s ease-in-out;
+
 //linear-gradient(to left, #fff, rgba(0, 0, 0, 1)) 1 100%
 body{
   padding:0;
   margin:0;
   background:#f8f8f8;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8X7c0R--PKhrzSz5yKL2wKTNJ93sjaDLm3hXSiPZ6PWyi0yAu");
+  background-image: url("/assets/pic/bg.jpg");
+  // background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8X7c0R--PKhrzSz5yKL2wKTNJ93sjaDLm3hXSiPZ6PWyi0yAu");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,16 +35,17 @@ body{
   height:$chartHeight;
   border-radius:5px;
   background: #ffffffa1 !important;
+  border: $whiteBorder;
 }
 .section1, .section2, .section3, .section4, {
   height:$sectionHeight2;
-  border:$themeBorder;
+  // border:$themeBorder;
   margin-bottom:10px;
 }
 .section7{
   margin-top:30px;
   height:$sectionHeight2;
-  border:$themeBorder;
+  // border:$themeBorder;
 }
 .section1 {
   margin-top:25px;
@@ -75,14 +81,14 @@ body{
   border:0px;
 }
 .s5s1, .s5s2, .s5s3 {
-  //border:$themeBorder;
+  //// border:$themeBorder;
   height:$sectionHeight2;
 }
 .section6 {
   border:0px;
 }
 .s6s1, .s6s2, .s6s3 {
-  // border:$themeBorder;
+  // // border:$themeBorder;
   height:$sectionHeight2;
 }
 .map-chart {
@@ -117,4 +123,28 @@ body{
   border-top:1px solid $midDark;
 }.border.table {
   border-color: $midDark !important
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: $scrollBottom;
+  right: $scrollRight;
+  opacity: 0;
+  transition: $transition;
+  .btn{
+    border: 1px solid #777;
+    box-shadow:2px 2px 2px #fff inset;
+    border-radius: 3px;
+    &:active{
+      box-shadow:2px 2px 2px #ccc;
+    }
+  }
+}
+.show-scroll {
+  opacity: 1;
+  transition: $transition;
+}
+.headSpan{
+  position: relative;
+  top:-15px
 }

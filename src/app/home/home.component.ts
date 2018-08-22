@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { ProjectService } from '../services/ProjectService';
+import { DOCUMENT } from "@angular/platform-browser";
 import './script.js';
 
 @Component({
@@ -8,12 +9,13 @@ import './script.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  navIsFixed: boolean
 
-  options: any;
-  section6: any;
-  section7: any;
+  options: any
+  section6: any
+  section7: any
 
-  constructor(private projectService: ProjectService) {
+  constructor( private projectService : ProjectService ){
 
     // this.projectService.emitDontShowSection6.subscribe(res=>{
     //   this.section6 = res.show;
@@ -26,8 +28,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.checkLogin();
+    this.checkLogin()
   }
+
 
   checkLogin() {
     let temp = localStorage.getItem('token');
@@ -37,5 +40,9 @@ export class HomeComponent implements OnInit {
       this.projectService.logout();
     }
   }
+  // upArrow(){
+  //   $("html, body").animate({ scrollTop: 0 }, "slow")
+  //   return false
+  // }
 
 }

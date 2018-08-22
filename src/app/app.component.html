@@ -1,4 +1,14 @@
 <router-outlet></router-outlet>
+<!--Scroll to top-->
+<div class="scroll-to-top" [ngClass]="{'show-scroll': navIsFixed}">
+    <button class="btn" (click)="scrollToTop()" style="
+      background-color: #7b91d7 !important;
+      border: 2px solid #7b91d7;
+      border-radius:25px !important;
+      color: white;
+      font-size: 14px;
 
-<!-- Parent page
-If logged in routed to Home else routed to login -->
+    "><i class="fas fa-arrow-up"></i></button>
+
+
+</div>
