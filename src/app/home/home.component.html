@@ -1,22 +1,31 @@
-<nav class="navbar navbar-light bg-white rounded-0 border-0 p-0">
-  <a class="navbar-brand" href="#">
-    <img src="../assets/pic/upGov.png" width="70" height="70" class="d-inline-block align-top" alt="" style="margin-left:40px">
-  </a>
-  <span class="headSpan">
-    <h4 class="hh4">Swachh UP 2018</h4>
-  </span>
+<nav class="navbar navbar-light bg-white rounded-0 border-0 p-2">
+  <div class="col-sm-4">
+    <a class="navbar-brand mr-4 d-inline" href="#">
+      <img src="../assets/pic/upGov.png" width="65" height="65" class="d-inline-block align-top" alt="" />
+    </a>
+  </div>
+  <div class="col-sm-4"><!--headSpan -->
+    <h4 class="hh4 text-center">Swachh Uttar Pradesh Gramin 2018</h4>
+    <fieldset class="col-sm-12">
+      <!-- <legend><small>Choose a date</small></legend> -->
+      <input type="date" class="form-control col-sm-6 d-inline-block" name="trip" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+      <button class="btn btn-primary col-sm-5 d-inline-block" type="button">Download excel</button>
+    </fieldset>
+  </div>
+  <div class="col-sm-4 text-right">
+    <div class="d-inline float-right"><!--pos-rel pos-left-->
+      <img src="../assets/pic/qci.png" width="65" height="70" class="d-inline-block align-top" alt="" />
+    </div>
+  </div>
   <!-- <input type="date"  (change)="getVal()"  [(ngModel)]='value' min={{json.rangeFrom}} max={{json.rangeTo}}
     style="border:2px solid gray; border-radius:10px"> -->
-  <div class="form-inline my-2 my-lg-0">
-    <img src="../assets/pic/qci.png" width="65" height="70" class="d-inline-block align-top" alt="" style="margin-right:40px">
-  </div>
 </nav>
 <div class="container-fluid text-center">
-  <div class="section1 mt-3" style="height:400px"
+  <div class="section1 mt-3" style="height:480px"
   data-aos="zoom-in"  data-aos-delay="250" data-aos-offset="400">
     <app-section1></app-section1>
   </div>
-  <div class="section2" style="height:375px"
+  <div class="section2 mt-5" style="height:375px"
   data-aos="fade-up"  data-aos-delay="350" >
     <app-section2></app-section2>
   </div>
