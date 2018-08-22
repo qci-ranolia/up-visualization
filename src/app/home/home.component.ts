@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/ProjectService';
+import './script.js';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
   checkLogin() {
     let temp = localStorage.getItem('token');
     if(temp === "true") {
-      
+
     } else {
       this.projectService.logout();
     }
