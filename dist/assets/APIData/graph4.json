@@ -1,0 +1,5 @@
+{
+  "name": "Type of Disposal",
+  "legends": ["Safe Disposal", "Unsafe Disposal"],
+  "data":[20, 40]
+}
