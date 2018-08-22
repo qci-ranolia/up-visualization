@@ -1,4 +1,6 @@
 <router-outlet></router-outlet>
-
-<!-- Parent page
-If logged in routed to Home else routed to login -->
+<!--Scroll to top-->
+<div class="scroll-to-top" [ngClass]="{'show-scroll': navIsFixed}">
+    <button class="btn" (click)="scrollToTop()">Top</button>
+</div>
+      
