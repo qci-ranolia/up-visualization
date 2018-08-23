@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
 import { ProjectService } from '../services/ProjectService'
 import { NgxEchartsService } from 'ngx-echarts'
 declare var $: any
@@ -9,7 +9,7 @@ declare var $: any
   styleUrls: ['./section1.component.scss']
 })
 
-export class Section1Component implements OnInit {
+export class Section1Component implements OnInit, OnDestroy {
   map : any = [];
   mapLoaded = false;
   option1: any;
@@ -19,28 +19,31 @@ export class Section1Component implements OnInit {
   colors:any;
   cName: any;
   mapColor : any;
+  getColors : any
 
   constructor(private projectService: ProjectService,
     private es: NgxEchartsService) {
 
     this.projectService.emitMap.subscribe(res=>{
-      console.log(res);
+      // console.log(res);
       this.map = res.map.map;
       this.mapData = res.data.data;
       this.getMap();
     });
 
     this.projectService.emitTree.subscribe(res=>{
-      console.log(res);
+      // console.log(res);
       this.treeData = res.tree;
       this.getTree();
       this.cName = res.tree.name;
     });
 
-    this.projectService.emitColors.subscribe(res=>{
+    this.getColors = this.projectService.emitColors.subscribe(res=>{
+      console.log(res)
       this.colors = res
     });
-    this.projectService.emitMapColor.subscribe(res=>{
+    this.getColors = this.projectService.emitMapColor.subscribe(res=>{
+      console.log(res)
       this.mapColor = res
     })
   }
@@ -63,8 +66,8 @@ export class Section1Component implements OnInit {
             this.option1 = {
               title: {
                 text: 'Map of UP',
-                // subtext: 'Map of UP',
-                sublink: ''
+                subtext: 'State Overview',
+                sublink: 'https://updashboardv1.firebaseapp.com/#/'
               },
               tooltip: {
                 trigger: 'item',
@@ -93,7 +96,6 @@ export class Section1Component implements OnInit {
                 }
               },
               visualMap: {
-
                 min:0,
                 max:100,
                 text:['Complete %','Start %'],
@@ -108,7 +110,10 @@ export class Section1Component implements OnInit {
                   name: '香港18区人口密度',
                   type: 'map',
                   mapType: 'USA', // map type should be registered
-                  zoom: 1.2,
+                  scaleLimit:{
+                    min:1.2,
+                    max:3,
+                  },
                   roam: true,
                   itemStyle: {
                     normal: {
@@ -235,6 +240,18 @@ export class Section1Component implements OnInit {
                 fontSize: 13
               }
             },
+            itemStyle:{
+              color:'#ffa02c',
+              borderColor:'#ffa02c'
+            },
+            lineStyle:{
+              color:'#ffa02c',
+              curveness:0.6
+            },/*
+            tooltip:{
+              backgroundColor:'rgba(0,0,0,0.7)',
+              borderColor:'#000'
+            }, */
             leaves: {
               label: {
                 normal: {
@@ -259,9 +276,12 @@ export class Section1Component implements OnInit {
     onTreeEvent(event: any, type: string) {
 
       this.cName = event.data.name;
-      console.log(this.cName);
+      // console.log(this.cName);
       this.projectService.getDatafromMaster(event.data.id);
 
   }
 
+  ngOnDestroy() {
+    this.getColors.unsubscribe()
+  }
 }

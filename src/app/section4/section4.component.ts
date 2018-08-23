@@ -6,6 +6,7 @@ import { ProjectService } from '../services/ProjectService';
   templateUrl: './section4.component.html',
   styleUrls: ['./section4.component.scss']
 })
+
 export class Section4Component implements OnInit {
 
   option1 : any;
@@ -30,26 +31,31 @@ export class Section4Component implements OnInit {
   colors : any
   barColors : any
 
-  constructor(private projectService: ProjectService) {
-    this.projectService.emitSection4Graph1.subscribe(res=>{
+  constructor( private projectService : ProjectService ){
+
+    this.projectService.emitSection4Graph1.subscribe( res => {
       this.graph1data1 = res.legends;
       this.graph1data2 = res.data;
       this.graph1name = res.name;
       this.getGraph1();
     })
-    this.projectService.emitColors.subscribe(res=>{
+
+    this.projectService.emitColors.subscribe( res => {
       this.colors = res
     })
-    this.projectService.emitBarColors.subscribe(res=>{
+
+    this.projectService.emitBarColors.subscribe( res => {
       this.barColors = res
     })
-    this.projectService.emitSection4Graph2.subscribe(res=>{
+
+    this.projectService.emitSection4Graph2.subscribe( res => {
       // console.log(res);
       this.graph2data1 = res.legends;
       this.graph2data2 = res.data;
       this.graph2name = res.name;
       this.getGraph2();
     });
+
   }
   ngOnInit() {
     this.projectService.getColors()
@@ -152,14 +158,14 @@ export class Section4Component implements OnInit {
                   }
               }
           ]
-      };
+      }
   }
 
   getGraph2() {
-    var yMax = 100;
-    var dataShadow = [];
+    var yMax = 100
+    var dataShadow = []
     for (var i = 0; i < this.graph1data2.length; i++) {
-      dataShadow.push(yMax);
+      dataShadow.push(yMax)
     }
     this.option2 = {
       color:[this.colors[2]],
@@ -196,12 +202,10 @@ export class Section4Component implements OnInit {
               position: 'top',
               formatter: '{c}%',
               color:'black'
-
             }
           }
       }]
-    };
+    }
   }
-
 
 }
