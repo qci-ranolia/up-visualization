@@ -10,7 +10,7 @@
                 {
                   "name": "North",
                   "id": 1,
-                  "collapsed": true,
+                  "collapsed": "true",
                   "children": [
                     {
                       "name": "District1",
@@ -37,7 +37,7 @@
                     {
                       "name": "District2",
                       "id": 6,
-                      "collapsed": true,
+                      "collapsed": "true",
                       "children": [
                         {
                           "name": "Block5",
@@ -56,7 +56,7 @@
                     {
                       "name": "District3",
                       "id": 7,
-                      "collapsed": true,
+                      "collapsed": "true",
                       "children": [
                         {
                           "name": "Block8",

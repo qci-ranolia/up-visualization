@@ -14,15 +14,24 @@ export class Section6Component implements OnInit {
   dataSet1: any = [];
   dataSet2: any = [];
   heading1: any;
-  count1: any;
   heading2: any;
+  count1: any;
   count2: any;
   data21: any;
   data22: any;
   data23: any;
+  data24: any;
+  data25: any;
   count21: any;
   count22: any;
   count23: any;
+  count24: any;
+  count25: any;
+  count31: any;
+  count32: any;
+  count33: any;
+  count42: any;
+  count43: any;
   heading3: any;
   count3: any;
   graph1name: any;
@@ -63,6 +72,14 @@ export class Section6Component implements OnInit {
       this.count22= res.data2_count;
       this.data23= res.data3;
       this.count23= res.data3_count;
+      if(res.data4){
+        this.data24= res.data4;
+        this.count24= res.data4_count;
+      }
+      if(res.data5){
+        this.data25= res.data5;
+        this.count25= res.data5_count;
+      }
       // console.log(res);
     });
 
