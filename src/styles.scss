@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$section1Height: 450px;
+$section1Height: 510px;
 $sectionHeight2: 420px;
 $sectionHeight3: 420px;
 $boxShadow:0 2px 1px -2px rgba(0, 0, 0, 0.5), 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0px 5px 0 rgba(0, 0, 0, 0.22);
@@ -15,8 +15,16 @@ $midDark:#777;
 $scrollRight:35px;
 $scrollBottom:35px;
 $transition:all .2s ease-in-out;
+$fheight:100%;
 
 //linear-gradient(to left, #fff, rgba(0, 0, 0, 1)) 1 100%
+
+.pos-rel{
+  position: relative;
+}
+.pos-left{
+  left:-5%
+}
 body{
   padding:0;
   margin:0;
@@ -84,9 +92,6 @@ body{
   //// border:$themeBorder;
   height:$sectionHeight2;
 }
-.section6 {
-  border:0px;
-}
 .s6s1, .s6s2, .s6s3 {
   // // border:$themeBorder;
   height:$sectionHeight2;
@@ -147,4 +152,7 @@ body{
 .headSpan{
   position: relative;
   top:-15px
+}
+.h100{
+  height: $fheight;
 }
