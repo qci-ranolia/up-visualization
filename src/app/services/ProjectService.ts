@@ -99,20 +99,20 @@ export class ProjectService {
 
   getDatafromMaster(id) {
 
-    let temp = this.masterData[id];                    // Get data from index of array
+    // let temp = this.masterData[id];                    // Get data from index of array
 
     // Get data from index of array as per ID
 
-    // let pos: any;
-    // for(let i =0; i<this.masterData.length; i++) {
-    //
-    //   if(id === this.masterData[i].id) {
-    //     pos = i;
-    //     break;
-    //   }
-    // }
-    //
-    // let temp = this.masterData[pos];                    // Get data from index of array as per ID
+    let pos: any;
+    for(let i =0; i<this.masterData.length; i++) {
+
+      if(id === this.masterData[i].id) {
+        pos = i;
+        break;
+      }
+    }
+
+    let temp = this.masterData[pos];                    // Get data from index of array as per ID
 
     this.emitSection2Graph1.emit(temp.Graph1);
     this.emitSection2Graph2.emit(temp.Graph2);
