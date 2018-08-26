@@ -22,11 +22,15 @@ export class Section6Component implements OnInit {
   data23: any;
   data24: any;
   data25: any;
+  data26: any;
+  data27: any;
   count21: any;
   count22: any;
   count23: any;
   count24: any;
   count25: any;
+  count26: any;
+  count27: any;
   count31: any;
   count32: any;
   count33: any;
@@ -79,6 +83,14 @@ export class Section6Component implements OnInit {
       if(res.data5){
         this.data25= res.data5;
         this.count25= res.data5_count;
+      }
+      if(res.data6){
+        this.data26= res.data6;
+        this.count26= res.data6_count;
+      }
+      if(res.data7){
+        this.data27= res.data7;
+        this.count27= res.data7_count;
       }
       // console.log(res);
     });
