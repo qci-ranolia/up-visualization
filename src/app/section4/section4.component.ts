@@ -180,7 +180,9 @@ export class Section4Component implements OnInit {
       },
       xAxis: {
           type: 'category',
-          data: this.graph2data1
+          data: this.graph2data1,
+          silent: false,
+          axisLabel: {rotate: 20, interval: 0}
       },
       yAxis: {
           type: 'value',
