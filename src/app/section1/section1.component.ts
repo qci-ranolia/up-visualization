@@ -241,8 +241,8 @@ export class Section1Component implements OnInit, OnDestroy {
               }
             },
             itemStyle:{
-              color:'#ffa02c',
-              borderColor:'#ffa02c'
+              color:'#7C90DB',
+              borderColor:'#7C90DB'
             },
             lineStyle:{
               color:'#ffa02c',
