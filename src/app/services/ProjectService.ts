@@ -262,8 +262,8 @@ export class ProjectService {
       this.APIService.UpdateFileState(data).subscribe((res)=>{
         console.log(res);
         if(res){
-          this.APIService.AfterFileUploadUrl();
-          alert('State data updated!');
+          // alert('State data updated!');
+          this.APIService.AfterFileUploadUrl().subscribe(r=>console.log(r));
           this.emitFileSuccess.emit({msg:res, area: area});
         } else {}
       }, (err)=>{
