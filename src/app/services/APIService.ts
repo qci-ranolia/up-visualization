@@ -49,7 +49,7 @@ export class APIService {
   }
 
   AfterFileUploadUrl() {
-    return this.http.get(this.fileUploadURL+'savealldata');
+    return this.http.get(this.fileUploadURL+'savealldata').map(res => res.json());
   }
 
   GetGraph1() {
