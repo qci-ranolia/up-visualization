@@ -5,10 +5,12 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class APIService {
 
   projectURL: string = '../assets/APIData/';
+  fileUploadURL: string = 'http://192.168.15.187:8080/';
+  afterFileUploadURL: string = 'http://192.168.15.187:8080/';
   // projectURL: string = 'http://192.168.15.187:8000';
   // projectURL: string = 'https://qcitech.org:8081';
 
-  constructor(private http: Http, ) { }
+  constructor(private http: Http ) { }
 
   Login(data) {
     return this.http.post(this.projectURL + '/login', data).map(res => res.json());
@@ -28,6 +30,26 @@ export class APIService {
 
   GetMasterData() {
     return this.http.get(this.projectURL + 'masterData.json').map(res => res.json());
+  }
+
+  UpdateFileVillage(data) {
+    return this.http.post(this.fileUploadURL+'uploadvillage',data);
+  }
+
+  UpdateFileBlock(data) {
+    return this.http.post(this.fileUploadURL+'uploadblock',data);
+  }
+
+  UpdateFileDistrict(data) {
+    return this.http.post(this.fileUploadURL+'uploaddistrict',data);
+  }
+
+  UpdateFileState(data) {
+    return this.http.post(this.fileUploadURL+'uploadstate',data);
+  }
+
+  AfterFileUploadUrl() {
+    return this.http.get(this.fileUploadURL+'savealldata');
   }
 
   GetGraph1() {

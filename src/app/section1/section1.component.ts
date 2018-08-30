@@ -39,11 +39,11 @@ export class Section1Component implements OnInit, OnDestroy {
     });
 
     this.getColors = this.projectService.emitColors.subscribe(res=>{
-      console.log(res)
+      // console.log(res)
       this.colors = res
     });
     this.getColors = this.projectService.emitMapColor.subscribe(res=>{
-      console.log(res)
+      // console.log(res)
       this.mapColor = res
     })
   }

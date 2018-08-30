@@ -1,3 +1,353 @@
-<p>
-  upload works!
-</p>
+<nav class="navbar navbar-light bg-white rounded-0 border-0 p-2">
+  <div class="col-sm-4">
+    <a class="navbar-brand mr-4 d-inline" href="#">
+      <img src="../assets/pic/upGov.png" width="65" height="65" class="d-inline-block align-top" alt="" />
+    </a>
+  </div>
+  <div class="col-sm-4"><!--headSpan -->
+    <h4 class="hh4 text-center">Swachh Uttar Pradesh Gramin 2018</h4>
+    <!-- <legend><small>Choose a date</small></legend> -->
+    <!-- <fieldset class="col-sm-12">
+      <input type="date" class="form-control col-sm-6 d-inline-block ml-3" name="trip" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+      <button class="btn btn-primary col-sm-5 d-inline-block" type="button">Download excel</button>
+    </fieldset> -->
+  </div>
+  <div class="col-sm-4 text-right">
+    <div class="d-inline float-right"><!--pos-rel pos-left-->
+      <img src="../assets/pic/qci.png" width="65" height="70" class="d-inline-block align-top" alt="" />
+    </div>
+  </div>
+  <!-- <input type="date"  (change)="getVal()"  [(ngModel)]='value' min={{json.rangeFrom}} max={{json.rangeTo}}
+    style="border:2px solid gray; border-radius:10px"> -->
+</nav>
+<div class="container"  style=" overflow-x:auto;overflow-y:hidden; height: 80vh">
+
+  <!-- <div class="row " style="padding:30px; padding-bottom:0" >
+
+    <div class=" col-6 text-left">
+      <h2 style="margin-bottom:0px; ">Uploads</h2>
+    </div>
+    <div class="col-6 text-right"  >
+
+      <button type="button" name="button" class="btn btn-primary" style="margin-top:5px;"
+      (click)='openURL("https://s3.ap-south-1.amazonaws.com/qci-coal-dashboard/Templates/Contract%20Upload%20Template.csv")'>
+        Sample contract <i class="fa fa-cloud-download" aria-hidden="true"></i>
+      </button>
+
+      <button type="button" name="button" class="btn btn-primary"style="margin-top:5px;"
+      (click)='openURL("https://s3.ap-south-1.amazonaws.com/qci-coal-dashboard/Templates/Process%20Tracker%20Template.csv")'>
+        Sample tracker &nbsp; <i class="fa fa-cloud-download" aria-hidden="true"></i>
+      </button>
+
+    </div>
+  </div> -->
+
+  <div class="row justify-content-md-center" style="padding:30px;  padding-bottom:0" >
+
+    <!-- <div class=" col-md-6 text-center" style="min-width: 200px; padding:20px;">
+      <span class="text-center" style="font-size:2rem">
+        <i class="fa fa-file-text-o fa-5x"></i>
+      </span> <br><br>
+      <div class="fileinput fileinput-new" data-provides="fileinput" >
+          <span class="btn  btn-file btn-primary" style="width:100% !important"><span>Update contract : </span><input type="file" (change)="updateContract($event);" accept=".csv"/></span>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center"  style="min-width: 200px; padding:20px;">
+      <span class=""  style="font-size:2rem">
+        <i class="fa fa-line-chart fa-5x"></i>
+      </span><br><br>
+      <div class="fileinput fileinput-new" data-provides="fileinput" style="width:100%">
+          <span class="btn  btn-file  btn-primary" style="width:100% !important"><span>Update tracker : </span><input type="file" (change)="updateTracker($event);"  accept=".csv"/></span>
+      </div>
+    </div> -->
+    <br>
+    <div class="row" >
+
+      <div class="col-12" style="padding-bottom:20px;" >
+        <span class="btn  btn-file btn-primary" style="width:40% !important"><span>Villages : </span><input type="file" (change)="updateFile($event,'village');" accept=".csv"/></span>
+      </div>
+
+      <div class="col-12" style="padding-bottom:20px;" >
+        <span class="btn  btn-file btn-primary" style="width:40% !important"><span>Block : </span><input type="file" (change)="updateFile($event,'block');" accept=".csv"/></span>
+      </div>
+
+      <div class="col-12" style="padding-bottom:20px;" >
+        <span class="btn  btn-file btn-primary" style="width:40% !important"><span>District : </span><input type="file" (change)="updateFile($event,'district');" accept=".csv"/></span>
+      </div>
+
+      <div class="col-12" style="padding-bottom:20px;" >
+        <span class="btn  btn-file btn-primary" style="width:40% !important"><span>State : </span><input type="file" (change)="updateFile($event,'state');" accept=".csv"/></span>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- <div class="row justify-content-md-center" style="padding:30px" >
+
+    <div class=" col-md-6 text-center">
+      <div class="card">
+        <div class="card-header">
+          <h5>Contract Tracker</h5>
+        </div>
+        <div class="card-block text-center" style="height: 350px; overflow-y:auto" >
+
+          <table class="table-striped table-hover" width="100%" cellpadding="0" cellspacing="0" >
+            <thead  style="background-color:#dcefff">
+              <tr>
+                <th  class="text-center">S.no.</th>
+                <th  class="text-center">File name</th>
+                <th  class="text-center">Time</th>
+                <th  class="text-center">Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let contract of contractHistory  ;  let i = index ">
+                <td>{{i+1}}.</td>
+                <td>{{contract.file_original_name}}</td>
+                <td>{{contract.time}}</td>
+                <td style="color:#0275d8">
+                    <i class="fa fa-share-square-o" (click)='pSummary(contract.status)' aria-hidden="true"></i>
+                    &nbsp;&nbsp;
+                    <i class="fa fa-download" aria-hidden="true" (click)='openURL(contract.url)'></i>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <div class="card">
+        <div class="card-header">
+          <h5>Daily Tracker</h5>
+        </div>
+        <div class="card-block" style="height: 350px; overflow-y:auto" >
+
+          <table class="table-striped table-hover" width="100%" cellpadding="0" cellspacing="0" >
+            <thead  style="background-color:#dcefff">
+              <tr>
+                <th  class="text-center">S.no.</th>
+                <th  class="text-center">File name</th>
+                <th  class="text-center">Time</th>
+                <th  class="text-center">Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tracker of trackerHistory  ;  let i = index ">
+                <td>{{i+1}}.</td>
+                <td>{{tracker.file_original_name}}</td>
+                <td>{{tracker.time}}</td>
+                <td style="color:#0275d8">
+                    <i class="fa fa-share-square-o" (click)='pSummary(tracker.status)' ></i>
+                    &nbsp;&nbsp;
+                    <i class="fa fa-download" aria-hidden="true" (click)='openURL(tracker.url)'></i>
+
+
+                </td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+
+
+  <div style="padding-bottom:50px;">
+  </div>
+
+</div>
+
+<!--
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Update summary</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="height:300px; overflow: auto ">
+
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>  {{updatedData.name1}} <b>{{updatedData.value1}}</b> <br>
+        <br>
+
+        <div id="accordion" role="tablist">
+
+          <div  *ngIf='updatedData.value2.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name2}} #{{updatedData.value2.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value2' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value3.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name3}} #{{updatedData.value3.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne3" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value3' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value4.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name4}} #{{updatedData.value4.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne4" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value4' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf='updatedData.value5.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name5}} #{{updatedData.value5.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne5" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value5' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value6.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name6}} #{{updatedData.value6.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne6" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value6' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value7.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne7" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name7}} #{{updatedData.value7.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne7" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value7' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value8.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne8" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name8}} #{{updatedData.value8.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne8" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value8' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value9.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne9" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name9}} #{{updatedData.value9.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne9" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value9' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+          <div  *ngIf='updatedData.value10.length' class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne10" aria-expanded="true" aria-controls="collapseOne">
+                  {{updatedData.name10}} #{{updatedData.value10.length}}
+                </a>
+              </div>
+            </div>
+
+            <div id="collapseOne10" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <b *ngFor='let cData of updatedData.value10' > <br> <span style="margin-left:60px" > {{cData}}  </span></b> <br>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+         <br>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cancel</button>
+        <div *ngIf='updateFlag' >
+          <button  type="button" class="btn btn-success" (click)='proceed()'   data-dismiss="modal"  >Proceed with update </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->

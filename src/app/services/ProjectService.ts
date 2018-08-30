@@ -29,6 +29,7 @@ export class ProjectService {
   emitSection6Graph1 = new EventEmitter<any>();
   emitSection6Graph2 = new EventEmitter<any>();
   emitSection6Graph3 = new EventEmitter<any>();
+  emitFileSuccess = new EventEmitter<any>();
   emitMapColor = new EventEmitter<any>();
   emitBarColors = new EventEmitter<any>();
   emitSection7Graph1 = new EventEmitter<any>();
@@ -214,6 +215,77 @@ export class ProjectService {
       alert('Error 21');
     });
   }
+
+  updateFile(data, area) {
+
+    if(area==='village') {
+
+      this.APIService.UpdateFileVillage(data).subscribe((res)=>{
+        console.log(res);
+        if(res){
+          alert('Village data updated!');
+          this.emitFileSuccess.emit({msg:res, area: area});
+        } else {}
+      }, (err)=>{
+        alert(err);
+        console.log(err);
+      });
+
+    } else if( area === 'block') {
+
+      this.APIService.UpdateFileBlock(data).subscribe((res)=>{
+        console.log(res);
+        if(res){
+          alert('Block data updated!');
+          this.emitFileSuccess.emit({msg:res, area: area});
+        } else {}
+      }, (err)=>{
+        alert(err);
+        console.log(err);
+      });
+
+    } else if( area === 'district' ) {
+
+      this.APIService.UpdateFileDistrict(data).subscribe((res)=>{
+        console.log(res);
+        if(res){
+          alert('District data updated!');
+          this.emitFileSuccess.emit({msg:res, area: area});
+        } else {}
+      }, (err)=>{
+        alert(err);
+        console.log(err);
+      });
+
+    } else {
+
+      this.APIService.UpdateFileState(data).subscribe((res)=>{
+        console.log(res);
+        if(res){
+          this.APIService.AfterFileUploadUrl();
+          alert('State data updated!');
+          this.emitFileSuccess.emit({msg:res, area: area});
+        } else {}
+      }, (err)=>{
+        alert(err);
+        console.log(err);
+      });
+
+    }
+
+  }
+  // 
+  // afterFileUpload(data) {
+  //   this.APIService.AfterFileUploadUrl(data).subscribe((res)=>{
+  //     console.log(res);
+  //     if(res){
+  //
+  //     } else {}
+  //   }, (err)=>{
+  //     console.log(err);
+  //     alert(err);
+  //   })
+  // }
 
   getSection2Graph1() {
     this.APIService.GetGraph1().subscribe(res => {
